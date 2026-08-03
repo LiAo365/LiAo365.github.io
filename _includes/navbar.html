@@ -1,17 +1,26 @@
-<nav class="navbar navbar-expand-sm navbar-light fixed-top mb-5 shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light fixed-top mb-5">
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
-        <a class="navbar-brand"><strong>{{site.data.profile.navbar_name}}</strong></a>
-        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-map"></i> Menu
-        </button>
+        <a class="navbar-brand" href="{{ '/' | relative_url }}"><strong>{{ site.data.profile.navbar_name }}</strong></a>
+
+        <div class="d-flex align-items-center d-md-none">
+            {% include widgets/lang_toggle.html %}
+            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto align-items-md-center">
                 {% for item in site.data.navigation.pages %}
                 <li class="nav-item {% if item.name == page.navbar_title or include.active_page == item.name %}active{% endif %}">
-                    <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+                    <a class="nav-link" href="{{ item.url | relative_url }}">
+                        <span class="lang-en">{{ item.name }}</span><span class="lang-zh">{{ item.name_zh | default: item.name }}</span>
+                    </a>
                 </li>
                 {% endfor %}
+                <li class="nav-item d-none d-md-flex align-items-center pl-md-2">
+                    {% include widgets/lang_toggle.html %}
+                </li>
             </ul>
         </div>
     </div>

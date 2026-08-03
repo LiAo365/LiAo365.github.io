@@ -1,0 +1,58 @@
+# Projects shown on /projects, newest first.
+# Each entry has an English block and a matching `_zh` block; `highlights` is a list
+# of bullet points and may contain inline HTML.
+
+projects:
+- title: AIGC Video Content Detection
+  title_zh: AIGC 视频内容检测
+  org: A*STAR Singapore
+  org_zh: 新加坡科技研究局 A*STAR
+  role: Team Member — video data synthesis & video understanding
+  role_zh: 参与成员 — 负责视频数据合成与视频理解模块
+  date: Oct. 2025 - Aug. 2026
+  date_zh: 2025.10 - 2026.08
+  logo: /assets/images/badges/ASTAR.png
+  tags: [Multimodal LLM, Video Understanding, Agent System]
+  highlights:
+  - Extended a video synthesis pipeline covering multiple generative models and forgery types (full-clip generation, local tampering, real/fake splicing); produced 300h+ of evaluation data supporting system-level assessment and iteration.
+  - Designed and implemented a long-video understanding agent system in which perception / analysis / decision agents cooperate through tool calls and intermediate reasoning to perform hierarchical understanding and segment-level localization on hour-long videos.
+  - Proposed SECD (Subspace Entropic Contrastive Decoding) to suppress temporal hallucination in lightweight MLLMs — training-free and plug-and-play. Published at <strong>ACM MM 2026</strong> (first author).
+  highlights_zh:
+  - 完善视频数据合成 Pipeline，覆盖多种生成模型与全片生成 / 局部篡改 / 真伪拼接等多类伪造形态，累计合成 300h+ 有效评测数据，支撑系统能力评估与迭代。
+  - 负责长视频内容理解 Agent System 的设计与实现，由感知 / 分析 / 决策多角色 agent 协同，结合工具调用与中间推理结果，完成小时级视频的分层理解与逐段定位。
+  - 针对轻量级 MLLM 在时序定位中的幻觉问题（视觉证据不足时退化为语言先验、输出貌似合理但无依据的时间戳），提出子空间熵对比解码 SECD，训练无关、即插即用；成果发表于 <strong>ACM MM 2026</strong>（一作）。
+
+- title: Intelligent Road Damage Recognition and Application
+  title_zh: 道路路面病害智能识别技术研究与应用
+  org: Chongqing Municipal Key Project (university–industry collaboration)
+  org_zh: 重庆市专项重点项目（校企联合）
+  role: Core Member
+  role_zh: 核心成员
+  date: Dec. 2022 - Dec. 2025
+  date_zh: 2022.12 - 2025.12
+  logo: /assets/images/badges/CQU.png
+  tags: [Object Detection, Data Augmentation, Data Platform]
+  highlights:
+  - Built a data platform on top of <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> (secondary development) covering cleaning, augmentation, model-assisted annotation and verification; processed roughly 600K expressway images.
+  - Established a pre-annotation → manual correction → retraining loop, raising pre-annotation usability to 95% across 100K+ annotation records.
+  - Integrated Copy-Paste and Mix-Up augmentation and fine-tuned YOLO detectors, bringing the miss rate on long-tail defects below 0.5%; delivered for production use.
+  highlights_zh:
+  - 基于 <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> 二次开发数据平台，覆盖清洗、增强、模型辅助标注与核验，处理约 60W 张快速路图像数据。
+  - 构建自定义模型预标注 — 人工修正 — 重训练闭环，预标注可用率提升至 95%，累计处理超 10W 条标注数据。
+  - 集成 Copy-Paste、Mix-Up 等数据增强策略，微调 YOLO 检测模型，实现长尾病害漏检率 &lt;0.5%，并交付使用。
+
+- title: Ascend & MindSpore Community Development Program
+  title_zh: Ascend & MindSpore 昇腾众智计划
+  org: Huawei Ascend Community
+  org_zh: 华为昇腾社区
+  role: Operator Development
+  role_zh: 算子开发
+  date: Oct. 2021 - Jun. 2022
+  date_zh: 2021.10 - 2022.06
+  tags: [C++, Operator Development, MindSpore]
+  highlights:
+  - Developed 8 custom operators in C++ on the Ascend platform, covering operator registration, forward/backward computation, unit testing and performance benchmarking, then integrated them into the MindSpore framework.
+  - All operators met MindSpore's official standards for computational efficiency and precision, and were successfully delivered and merged into the framework.
+  highlights_zh:
+  - 在 Ascend 平台使用 C++ 开发 8 个自定义算子，完成算子注册、前向 / 反向计算、单测与性能测试全流程，并在 MindSpore 框架中完成适配集成。
+  - 所有算子的计算效率与精度均达到 MindSpore 官方标准，成功交付并合入框架。

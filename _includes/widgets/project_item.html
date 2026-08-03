@@ -1,0 +1,54 @@
+{%- comment -%}
+  One project entry. Usage:
+  {% include widgets/project_item.html item=item hide_bottom_border=forloop.last %}
+{%- endcomment -%}
+{% assign item = include.item %}
+
+<div class="p-3 p-md-4 {% unless include.hide_bottom_border %}border-bottom border-gray{% endunless %}">
+    <div class="d-flex align-items-start">
+        {%- comment -%} Keep the text column aligned whether or not there is a logo. {%- endcomment -%}
+        {% if item.logo %}
+        <img src="{{ item.logo | relative_url }}" alt="" style="width: 26px;" class="mr-3 mt-1 d-none d-sm-block">
+        {% else %}
+        <span class="mr-3 mt-1 d-none d-sm-block text-center text-muted" style="width: 26px;"><i class="fas fa-folder-open"></i></span>
+        {% endif %}
+        <div class="flex-grow-1" style="min-width: 0;">
+            <div class="d-flex flex-column flex-md-row">
+                <h5 class="mb-1 mr-auto font-weight-500">
+                    <span class="lang-en">{{ item.title }}</span><span class="lang-zh">{{ item.title_zh | default: item.title }}</span>
+                </h5>
+                <div class="text-muted small no-break mt-1 mt-md-0 pl-md-3">
+                    <em><span class="lang-en">{{ item.date }}</span><span class="lang-zh">{{ item.date_zh | default: item.date }}</span></em>
+                </div>
+            </div>
+
+            <div class="text-muted small mb-2">
+                <span class="lang-en">{{ item.org }}{% if item.org and item.role %} · {% endif %}{{ item.role }}</span>
+                <span class="lang-zh">{{ item.org_zh | default: item.org }}{% if item.org and item.role %} · {% endif %}{{ item.role_zh | default: item.role }}</span>
+            </div>
+
+            {% if item.tags %}
+            <div class="mb-2">
+                {% for tag in item.tags %}
+                <span class="badge badge-light mr-1">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="lang-en">
+                <ul class="small mb-0 pl-3 project-highlights">
+                    {% for point in item.highlights %}
+                    <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="lang-zh">
+                <ul class="small mb-0 pl-3 project-highlights">
+                    {% for point in item.highlights_zh %}
+                    <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

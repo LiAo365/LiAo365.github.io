@@ -1,61 +1,161 @@
-primary_name: "Your Name"
+primary_name: "Ao Li"
 secondary_name: ""
-navbar_name: "Your Name"
+navbar_name: "Ao Li"
+
+primary_name_zh: "李傲"
+secondary_name_zh: "Ao Li"
 
 positions:
-- name: Title or Position
-- name: Affiliation Name
-  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+- name: Ph.D. Candidate in Software Engineering
+- name: Chongqing University
+  logo: /assets/images/badges/CQU.png
+- name: Visiting Ph.D., A*STAR Singapore
+  logo: /assets/images/badges/ASTAR.png
 
+positions_zh:
+- name: 软件工程 博士研究生
+- name: 重庆大学
+  logo: /assets/images/badges/CQU.png
+- name: 新加坡科技研究局 A*STAR 联合培养博士
+  logo: /assets/images/badges/ASTAR.png
 
-email: "your@email.com"
-# cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
-github: your_github_id
-twitter: your_twitter_id  # Do not include the '@' symbol
-# wechat_qrcode: /assets/images/etc/wechat.jpg
-# wechat_prompt: >-
-#   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
+email: "li_ao_365@outlook.com"
+# cv_link: /assets/files/cv_en.pdf
+# cv_link_zh: /assets/files/cv_zh.pdf
+# gscholar: your_google_scholar_id
+github: LiAo365
+# twitter: your_twitter_id
 # linkedin: your-linked-in-id
 # orcid: 0000-0000-0000-0000
 
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
+    I am a Ph.D. candidate in Software Engineering at
+    <a href="https://www.cqu.edu.cn/" target="_blank">Chongqing University</a>,
+    advised by <a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">Prof. Yongxin Ge</a>.
+    My research focuses on <strong>multimodal video understanding</strong>, <strong>video temporal grounding</strong>,
+    and <strong>moment retrieval</strong>.
   </p>
   <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
+    I am currently a CSC-funded visiting researcher at
+    <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group),
+    working with <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
+    on efficient reasoning of multimodal LLMs on video data.
+  </p>
+  <p>
+    I have published 2 first-author CCF-A papers at ACM MM and 1 JCR Q1 journal paper at IEEE TCSVT.
+  </p>
+
+short_bio_zh: >-
+  <p>
+    我是<a href="https://www.cqu.edu.cn/" target="_blank">重庆大学</a>软件工程专业博士研究生，
+    师从<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>。
+    主要研究方向为<strong>多模态视频理解</strong>、<strong>视频时序定位</strong>与<strong>视频时刻检索</strong>。
+  </p>
+  <p>
+    目前在<a href="https://www.a-star.edu.sg/" target="_blank">新加坡科技研究局（A*STAR）</a> CFAR Group
+    进行国家公派联合培养，导师为
+    <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>，
+    研究内容为多模态大语言模型在视频数据上的高效推理。
+  </p>
+  <p>
+    已发表 2 篇 CCF-A 类会议论文（ACM MM，一作）与 1 篇中科院一区期刊论文（IEEE TCSVT，一作）。
   </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+# portrait_caption: >-
+#   Your caption here (optional).
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
-  position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+- name: Chongqing University
+  logo: /assets/images/badges/CQU.png
+  position: >-
+    School of Big Data & Software Engineering <br/>
+    Ph.D. Candidate in Software Engineering
+  date: Sep. 2023 - Jun. 2027 (Expected)
+- name: Chongqing University
+  logo: /assets/images/badges/CQU.png
+  position: >-
+    School of Computer Science <br/>
+    M.S. in Computer Application Technology
+  date: Sep. 2018 - Jun. 2021
+- name: North University of China
+  logo: /assets/images/badges/NUC.png
+  position: >-
+    School of Information and Communication Engineering <br/>
+    B.E. in Communication Engineering
+  date: Sep. 2014 - Jun. 2018
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+education_zh:
+- name: 重庆大学
+  logo: /assets/images/badges/CQU.png
+  position: >-
+    大数据与软件学院 <br/>
+    软件工程 学术型博士研究生
+  date: 2023.09 - 2027.06（预计）
+- name: 重庆大学
+  logo: /assets/images/badges/CQU.png
+  position: >-
+    计算机学院 <br/>
+    计算机应用技术 硕士研究生
+  date: 2018.09 - 2021.06
+- name: 中北大学
+  logo: /assets/images/badges/NUC.png
+  position: >-
+    信息与通信工程学院 <br/>
+    通信工程 本科
+  date: 2014.09 - 2018.06
+
+experience:
+- name: A*STAR Singapore
+  logo: /assets/images/badges/ASTAR.png
+  position: >-
+    CFAR Group <br/>
+    CSC-funded Visiting Ph.D., advised by Prof. Joey Tianyi Zhou
+  date: Sep. 2025 - Aug. 2026
+
+experience_zh:
+- name: 新加坡科技研究局 A*STAR
+  logo: /assets/images/badges/ASTAR.png
+  position: >-
+    CFAR Group <br/>
+    国家公派联合培养博士，导师：Prof. Joey Tianyi Zhou
+  date: 2025.09 - 2026.08
 
 awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+- name: China Scholarship Council (CSC) Scholarship for Joint Ph.D. Program
+  date: 2025
+
+awards_zh:
+- name: 国家留学基金委（CSC）公派联合培养博士研究生奖学金
+  date: 2025
+
+# Shown on the "More" page.
+skills:
+- name: Programming
+  items: Python, C/C++, Java; solid grounding in data structures and algorithms.
+- name: Frameworks & Tools
+  items: PyTorch, Transformers / PEFT, DeepSpeed; Linux, Git, Docker; Label Studio (secondary development).
+- name: Research
+  items: Multimodal video understanding, video temporal grounding, weakly-supervised temporal action localization, efficient MLLM inference.
+
+skills_zh:
+- name: 编程语言
+  items: Python，熟悉 C/C++、Java；熟悉常用数据结构与算法。
+- name: 框架与工具
+  items: PyTorch、Transformers / PEFT、DeepSpeed；Linux、Git、Docker；Label Studio（二次开发经验）。
+- name: 研究方向
+  items: 多模态视频理解、视频时序定位、弱监督时序动作定位、多模态大模型高效推理。
+
+languages:
+- name: English
+  items: CET-6; one-year visiting research in Singapore; comfortable with professional communication and academic writing.
+- name: Chinese
+  items: Native speaker.
+
+languages_zh:
+- name: 英语
+  items: 大学英语六级（CET-6）；新加坡联合培养一年，可进行英文工作交流与论文写作。
+- name: 中文
+  items: 母语。

@@ -1,0 +1,6 @@
+{%- comment -%}Publication title; falls back to the English title when no `title_zh` is set.{%- endcomment -%}
+{%- if include.item.title_zh -%}
+<span class="lang-en">{{ include.item.title }}</span><span class="lang-zh">{{ include.item.title_zh }}</span>
+{%- else -%}
+{{ include.item.title }}
+{%- endif -%}

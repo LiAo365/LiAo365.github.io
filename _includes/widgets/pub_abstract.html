@@ -1,0 +1,6 @@
+{%- comment -%}Publication TLDR; falls back to the English text when no `abstract_zh` is set.{%- endcomment -%}
+{%- if include.item.abstract_zh -%}
+<span class="lang-en">{{ include.item.abstract }}</span><span class="lang-zh">{{ include.item.abstract_zh }}</span>
+{%- else -%}
+{{ include.item.abstract }}
+{%- endif -%}

@@ -1,0 +1,23 @@
+{%- comment -%}
+  Logo + name + position + date list, used for education and experience.
+  Usage: {% include widgets/timeline_list.html items=site.data.profile.education %}
+{%- endcomment -%}
+<ul class="list-unstyled mb-1">
+    {% for item in include.items %}
+    <li class="media mb-3">
+        {% if item.logo %}
+        <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 22px;" class="mr-2 mt-1">
+        {% else %}
+        <span class="mr-2 mt-1 d-inline-block text-center text-muted" style="width: 22px;"><i class="fas fa-university"></i></span>
+        {% endif %}
+        <div class="media-body">
+            <div class="font-weight-500">{{ item.name }}</div>
+            {% if item.dept %}<div class="small">{{ item.dept }}</div>{% endif %}
+            <div class="small d-flex">
+                <div class="text-muted">{{ item.position }}</div>
+                <div class="mt-auto ml-auto pl-2 no-break text-muted"><em>{{ item.date }}</em></div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

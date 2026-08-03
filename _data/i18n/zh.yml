@@ -1,0 +1,45 @@
+# 站点中文界面文案
+# 模板中的用法：{% include i18n.html key="education" %}
+
+# 导航栏
+menu: "菜单"
+
+# 个人信息卡片
+about_me: "关于我"
+cv: "个人简历"
+google_scholar: "谷歌学术"
+wechat: "微信"
+close: "关闭"
+
+# 教育与经历
+education: "教育经历"
+experience: "研究与工作经历"
+honors_awards: "荣誉奖励"
+
+# 动态
+news: "最新动态"
+
+# 论文
+selected_publications: "代表性论文"
+view_all: "（查看全部）"
+all_publications: "全部论文"
+
+# 项目
+projects: "项目经历"
+projects_subtitle: "部分科研与工程项目。"
+
+# 博客
+blog: "个人博客"
+read_more: "阅读全文"
+back_to_blog: "返回博客列表"
+toc_title: "目录"
+
+# More 页面
+more: "更多"
+skills: "技术能力"
+languages: "语言能力"
+elsewhere: "其他链接"
+showcase: "作品展示"
+
+# 页脚
+last_updated: "最后更新："

@@ -1,0 +1,10 @@
+{%- comment -%}
+  Label + description rows. Usage:
+  {% include widgets/definition_list.html items=site.data.profile.skills %}
+{%- endcomment -%}
+<dl class="row mb-0 small">
+    {% for item in include.items %}
+    <dt class="col-sm-4 font-weight-500">{{ item.name }}</dt>
+    <dd class="col-sm-8 text-muted {% unless forloop.last %}mb-3{% else %}mb-0{% endunless %}">{{ item.items }}</dd>
+    {% endfor %}
+</dl>

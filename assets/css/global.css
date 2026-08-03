@@ -1,25 +1,67 @@
 @charset "utf-8";
+
+/* ===== Base ===== */
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     font-weight: 400;
     padding-top: 5.0rem;
+    color: #2d3436;
+}
+
+/* Always show the scrollbar so page-to-page navigation doesn't shift the layout */
+html {
+    overflow-y: scroll;
+}
+
+.footer {
+    margin-top: auto;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-weight: 700;
+    font-weight: 600;
 }
 
+.font-weight-500 {
+    font-weight: 500;
+}
+
+a {
+    color: #4a7298;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2d3436;
+}
+
+hr {
+    border-top: 1px solid #f0f0f0;
+}
+
+/* ===== Cards: flat, hairline border instead of drop shadow ===== */
 .card {
-    border-radius: 0.8rem!important;
+    border-radius: 0.8rem !important;
+    box-shadow: none !important;
+    border: 1px solid #f0f0f0 !important;
+}
+
+.card:hover {
+    border-color: #e0e0e0 !important;
+    transition: border-color 0.2s ease;
+}
+
+/* Neutralise Bootstrap's shadow utility so the whole site reads flat */
+.shadow-sm {
+    box-shadow: none !important;
 }
 
 .card-img-overlay {
-    border-radius: 0.8rem!important;
+    border-radius: 0.8rem !important;
 }
 
 .rounded-xl {
-    border-radius: 0.8rem!important;
+    border-radius: 0.8rem !important;
 }
 
 .rounded-xl-bottom {
@@ -32,26 +74,84 @@ h1, h2, h3, h4, h5, h6,
     border-top-right-radius: 0.8rem !important;
 }
 
+.border-gray {
+    border-color: #f0f0f0 !important;
+}
 
+.border-bottom,
+.border-top {
+    border-color: #f0f0f0 !important;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar-brand {
+    letter-spacing: -0.01em;
+}
+
+.navbar .nav-link {
+    color: #6c757d;
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #2d3436;
+}
+
+.navbar .nav-item.active .nav-link {
+    color: #2d3436;
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    border: 1px solid #e6e6e6;
+    border-radius: 999px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* The expanded mobile menu overlays page content, so it needs to be opaque */
+@media (max-width: 767.98px) {
+    .navbar .navbar-collapse.show,
+    .navbar .navbar-collapse.collapsing {
+        background: #fff;
+        margin: 0 -1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* ===== Profile ===== */
 .text-profile-position {
     font-weight: 400;
 }
 
 .text-profile-bio {
-    /* font-family: "Raleway"; */
     font-weight: 400;
+    line-height: 1.7;
 }
 
-.navbar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+.text-profile-bio h6 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.email-text {
+    font-family: Source Code Pro, monospace;
 }
 
 .inline-badge {
     height: 16px;
     vertical-align: -10%;
-    margin-right: 2px;
+    margin-right: 4px;
     line-break: unset;
 }
 
@@ -59,6 +159,7 @@ h1, h2, h3, h4, h5, h6,
     white-space: nowrap;
 }
 
+/* ===== Publications / projects ===== */
 .cover-image {
     width: 180px;
     max-height: 120px;
@@ -68,6 +169,73 @@ h1, h2, h3, h4, h5, h6,
     min-height: 100px;
 }
 
+.badge-publication {
+    font-size: 85%;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-radius: 4px;
+    padding: 0.25em 0.6em;
+    border: none;
+}
+
+.badge-publication.badge-success  { background-color: #e8f5e9; color: #4a8c5c; }
+.badge-publication.badge-warning  { background-color: #fff8e1; color: #b8860b; }
+.badge-publication.badge-info     { background-color: #e3f2fd; color: #5085a5; }
+.badge-publication.badge-danger   { background-color: #fce4ec; color: #c06070; }
+.badge-publication.badge-primary  { background-color: #e8eaf6; color: #5c6bc0; }
+.badge-publication.badge-secondary{ background-color: #f5f5f5; color: #777; }
+
+.badge-light {
+    background-color: #f5f5f5;
+    color: #666;
+    font-weight: 500;
+}
+
+.project-highlights li {
+    margin-bottom: 0.35rem;
+    line-height: 1.6;
+}
+
+.project-highlights li:last-child {
+    margin-bottom: 0;
+}
+
+/* Year headings on the publications / blog pages */
+h2.pt-4 {
+    font-weight: 500;
+    color: #999;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Sidebar year navigation */
+#navbar-year .nav-link {
+    color: #999;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+}
+
+#navbar-year .nav-link.active {
+    background-color: transparent;
+    color: #2d3436;
+    font-weight: 600;
+}
+
+/* ===== Buttons ===== */
+.btn-outline-primary {
+    color: #4a7298;
+    border-color: #d0dde8;
+    border-radius: 999px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4a7298;
+    border-color: #4a7298;
+    color: #fff;
+}
+
+/* ===== Lazy-loading placeholders ===== */
 img.lazy {
     background-image: url('images/loading.gif');
     background-repeat: no-repeat;
@@ -84,10 +252,139 @@ div.lazy {
     min-height: 80px;
 }
 
-.badge-publication {
-    font-size: 100%;
+/* ===== Blog layout ===== */
+.blog-layout-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    gap: 1.5rem;
 }
 
-.email-text {
-    font-family: Source Code Pro, monospace;
+.blog-main {
+    flex: 0 1 950px;
+    min-width: 0;
+}
+
+.blog-toc-sidebar {
+    flex: 0 0 auto;
+    width: clamp(160px, 18vw, 360px);
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .blog-toc-sidebar {
+        display: block;
+    }
+}
+
+.blog-toc-nav {
+    position: sticky;
+    top: 6rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    padding-left: 0.75rem;
+    border-left: 2px solid #f0f0f0;
+    scrollbar-width: none;
+}
+
+.blog-toc-nav::-webkit-scrollbar {
+    width: 0;
+}
+
+.blog-toc-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #aaa;
+    margin-bottom: 0.75rem;
+}
+
+.blog-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-toc-list li {
+    margin-bottom: 0.25rem;
+}
+
+.blog-toc-list a {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #999;
+    text-decoration: none;
+    padding: 0.15rem 0;
+    transition: color 0.2s ease;
+}
+
+.blog-toc-list a:hover {
+    color: #2d3436;
+    text-decoration: none;
+}
+
+.blog-toc-list a.toc-active {
+    color: #4a7298;
+    font-weight: 500;
+}
+
+.blog-toc-list .toc-h3 { padding-left: 0.75rem; }
+.blog-toc-list .toc-h4 { padding-left: 1.5rem; }
+
+/* ===== i18n ===== */
+/* Both languages are present in the markup; only the active one is displayed. */
+html.lang-active-en .lang-zh {
+    display: none !important;
+}
+
+html.lang-active-zh .lang-en {
+    display: none !important;
+}
+
+/* Pill-shaped EN / 中 switch in the navbar */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #e0e6ec;
+    border-radius: 999px;
+    background-color: #f7f9fb;
+    padding: 2px;
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.lang-toggle-label {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    color: #8b949e;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.4;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-toggle-label:hover {
+    color: #4a7298;
+}
+
+.lang-toggle-label:focus {
+    outline: none;
+}
+
+.lang-toggle-label:focus-visible {
+    box-shadow: 0 0 0 2px rgba(74, 114, 152, 0.35);
+}
+
+.lang-toggle-label.lang-toggle-active {
+    background-color: #4a7298;
+    color: #fff;
+    font-weight: 500;
 }

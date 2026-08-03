@@ -1,0 +1,8 @@
+{%- comment -%}
+  Pill-shaped EN / 中 switch. Included twice by the navbar (mobile + desktop), so it
+  must not use element IDs; assets/js/i18n.js keys off `data-lang` instead.
+{%- endcomment -%}
+<div class="lang-toggle" role="group" aria-label="Language">
+    <button type="button" class="lang-toggle-label" data-lang="en" onclick="toggleLanguage('en')" aria-label="Switch to English">EN</button>
+    <button type="button" class="lang-toggle-label" data-lang="zh" onclick="toggleLanguage('zh')" aria-label="切换到中文">中</button>
+</div>

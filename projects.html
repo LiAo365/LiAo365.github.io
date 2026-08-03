@@ -1,0 +1,18 @@
+---
+layout: default
+title : Projects
+navbar_title: Projects
+---
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="pt-4">{% include i18n.html key="projects" %}</h2>
+        <p class="text-muted small">{% include i18n.html key="projects_subtitle" %}</p>
+
+        <div class="my-0 p-0 bg-white rounded-xl" style="border: 1px solid #f0f0f0;">
+            {% for item in site.data.projects.projects %}
+                {% include widgets/project_item.html item=item hide_bottom_border=forloop.last %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

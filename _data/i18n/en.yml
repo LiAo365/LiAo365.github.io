@@ -1,0 +1,45 @@
+# UI strings for the English version of the site.
+# Usage in templates: {% include i18n.html key="education" %}
+
+# Navbar
+menu: "Menu"
+
+# Profile card
+about_me: "About Me"
+cv: "Curriculum Vitae"
+google_scholar: "Google Scholar"
+wechat: "WeChat"
+close: "Close"
+
+# Experience card
+education: "Education"
+experience: "Experience"
+honors_awards: "Honors & Awards"
+
+# News card
+news: "News"
+
+# Publications
+selected_publications: "Selected Publications"
+view_all: "(view all)"
+all_publications: "All publications"
+
+# Projects
+projects: "Projects"
+projects_subtitle: "Selected research and engineering projects."
+
+# Blog
+blog: "Blog"
+read_more: "Read more"
+back_to_blog: "Back to all posts"
+toc_title: "Table of Contents"
+
+# More page
+more: "More"
+skills: "Skills"
+languages: "Languages"
+elsewhere: "Elsewhere"
+showcase: "Showcase"
+
+# Footer
+last_updated: "Last updated:"
