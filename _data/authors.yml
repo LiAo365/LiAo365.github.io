@@ -1,3 +1,6 @@
+# Authors appearing in _publications. An entry is only needed to bold a name,
+# override how it renders, or link it to a homepage — unlisted names render as-is.
+
 "Ao Li":
   bold: true
 
@@ -10,6 +13,22 @@
 "Joey Tianyi Zhou":
   url: https://joeyzhouty.github.io/
 
+# Collaborators (add a `url:` to link any of them to a homepage)
 "Yiqing Zhu":
-
 "Jinrong Sheng":
+"Zhongming Chen":
+"Jiaruo Yu":
+"Ziqiang Li":
+"Long Deng":
+"Bingxin Zhou":
+"Wenshi Li":
+"Sheng Huang":
+"Yanwen Wu":
+"Mingjian Hong":
+"Chunhua Yang":
+"Xin Feng":
+"Zhimin Ruan":
+"Tianhao Xiao":
+"Rong Pang":
+"Chenxu Niu":
+"Ling Xu":

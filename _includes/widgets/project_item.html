@@ -28,12 +28,22 @@
             </div>
 
             {% if item.tags %}
-            <div class="mb-2">
+            <div class="mb-2 keyword-row">
                 {% for tag in item.tags %}
-                <span class="badge badge-light mr-1">{{ tag }}</span>
+                <span class="keyword-tag">{{ tag }}</span>
                 {% endfor %}
             </div>
             {% endif %}
+
+            {%- if item.tech -%}
+            <div class="tech-stack small mb-2">
+                {%- comment -%} No stray whitespace around the label: it would show up before the colon. {%- endcomment -%}
+                <span class="tech-stack-label lang-en">{{ site.data.i18n.en.tech_stack }}</span
+                ><span class="tech-stack-label lang-zh">{{ site.data.i18n.zh.tech_stack }}</span
+                ><span class="lang-en">{{ item.tech }}</span
+                ><span class="lang-zh">{{ item.tech_zh | default: item.tech }}</span>
+            </div>
+            {%- endif -%}
 
             <div class="lang-en">
                 <ul class="small mb-0 pl-3 project-highlights">

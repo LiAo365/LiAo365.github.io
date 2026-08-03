@@ -17,6 +17,13 @@
                 <div class="text-muted">{{ item.position }}</div>
                 <div class="mt-auto ml-auto pl-2 no-break text-muted"><em>{{ item.date }}</em></div>
             </div>
+            {% if item.details %}
+            <ul class="small text-muted mb-0 mt-1 pl-3">
+                {% for detail in item.details %}
+                <li>{{ detail }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
     </li>
     {% endfor %}

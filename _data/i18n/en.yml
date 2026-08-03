@@ -27,6 +27,7 @@ all_publications: "All publications"
 # Projects
 projects: "Projects"
 projects_subtitle: "Selected research and engineering projects."
+tech_stack: "Tech stack"
 
 # Blog
 blog: "Blog"

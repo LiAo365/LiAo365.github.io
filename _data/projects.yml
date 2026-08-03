@@ -5,14 +5,13 @@
 projects:
 - title: AIGC Video Content Detection
   title_zh: AIGC 视频内容检测
-  org: A*STAR Singapore
-  org_zh: 新加坡科技研究局 A*STAR
   role: Team Member — video data synthesis & video understanding
   role_zh: 参与成员 — 负责视频数据合成与视频理解模块
   date: Oct. 2025 - Aug. 2026
   date_zh: 2025.10 - 2026.08
-  logo: /assets/images/badges/ASTAR.png
   tags: [Multimodal LLM, Video Understanding, Agent System]
+  tech: Python · PyTorch · <strong>Transformers / PEFT</strong> · DeepSpeed · <strong>Multimodal LLMs</strong> · <strong>Video Generation Models</strong> · <strong>Multi-agent Orchestration</strong>
+  tech_zh: Python · PyTorch · <strong>Transformers / PEFT</strong> · DeepSpeed · <strong>多模态大模型</strong> · <strong>视频生成模型</strong> · <strong>多智能体编排</strong>
   highlights:
   - Extended a video synthesis pipeline covering multiple generative models and forgery types (full-clip generation, local tampering, real/fake splicing); produced 300h+ of evaluation data supporting system-level assessment and iteration.
   - Designed and implemented a long-video understanding agent system in which perception / analysis / decision agents cooperate through tool calls and intermediate reasoning to perform hierarchical understanding and segment-level localization on hour-long videos.
@@ -32,6 +31,8 @@ projects:
   date_zh: 2022.12 - 2025.12
   logo: /assets/images/badges/CQU.png
   tags: [Object Detection, Data Augmentation, Data Platform]
+  tech: Python · PyTorch · <strong>YOLO</strong> · <strong>Label Studio (secondary development)</strong> · <strong>Copy-Paste / Mix-Up</strong> · Docker · Linux
+  tech_zh: Python · PyTorch · <strong>YOLO</strong> · <strong>Label Studio（二次开发）</strong> · <strong>Copy-Paste / Mix-Up</strong> · Docker · Linux
   highlights:
   - Built a data platform on top of <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> (secondary development) covering cleaning, augmentation, model-assisted annotation and verification; processed roughly 600K expressway images.
   - Established a pre-annotation → manual correction → retraining loop, raising pre-annotation usability to 95% across 100K+ annotation records.
@@ -43,6 +44,7 @@ projects:
 
 - title: Ascend & MindSpore Community Development Program
   title_zh: Ascend & MindSpore 昇腾众智计划
+  logo: /assets/images/badges/MindSpore.png
   org: Huawei Ascend Community
   org_zh: 华为昇腾社区
   role: Operator Development
@@ -50,9 +52,32 @@ projects:
   date: Oct. 2021 - Jun. 2022
   date_zh: 2021.10 - 2022.06
   tags: [C++, Operator Development, MindSpore]
+  tech: C++ · <strong>Ascend CANN</strong> · <strong>MindSpore</strong> · <strong>Custom Operator Development</strong> · Unit Testing & Benchmarking
+  tech_zh: C++ · <strong>Ascend CANN</strong> · <strong>MindSpore</strong> · <strong>自定义算子开发</strong> · 单元测试与性能基准
   highlights:
   - Developed 8 custom operators in C++ on the Ascend platform, covering operator registration, forward/backward computation, unit testing and performance benchmarking, then integrated them into the MindSpore framework.
   - All operators met MindSpore's official standards for computational efficiency and precision, and were successfully delivered and merged into the framework.
   highlights_zh:
   - 在 Ascend 平台使用 C++ 开发 8 个自定义算子，完成算子注册、前向 / 反向计算、单测与性能测试全流程，并在 MindSpore 框架中完成适配集成。
   - 所有算子的计算效率与精度均达到 MindSpore 官方标准，成功交付并合入框架。
+
+- title: Meituan Training Platform Development
+  title_zh: 美团大学项目管理端与用户端开发
+  logo: /assets/images/badges/MTDX.png
+  org: Meituan, Enterprise Platform R&D Department
+  org_zh: 美团点评，企业平台研发部
+  role: Software System Development Intern
+  role_zh: 系统开发实习生
+  date: May. 2020 - Aug. 2020
+  date_zh: 2020.05 - 2020.08
+  tags: [Backend Development, MQ, Kafka, Caching]
+  tech: Java · <strong>MQ</strong> · <strong>Kafka</strong> · <strong>Redis</strong> · Local Cache
+  tech_zh: Java · <strong>MQ</strong> · <strong>Kafka</strong> · <strong>Redis</strong> · 本地缓存
+  highlights:
+  - Designed, developed and optimized a message push service, integrating MQ to enable asynchronous batch message sending and a generic, reusable template design.
+  - Independently designed and developed the certificate feature, the closed-loop certification course workflow, and URL-based video upload; used Kafka as the messaging middleware.
+  - Optimized high-frequency API endpoints with a two-level (Redis + local) caching strategy, reducing TP999 latency to under 10ms.
+  highlights_zh:
+  - 负责消息推送服务的方案设计、开发与优化，通过接入 MQ 等方式实现了异步批量消息发送以及整个模板的通用性设计与开发。
+  - 独立完成证书功能、认证课功能闭环、通过 URL 上传视频等功能的方案设计与开发，熟悉并使用 Kafka 中间件。
+  - 接口性能优化，对高频调用接口采用二级缓存机制提升接口性能（TP999 在 10ms 内），熟悉并使用 Redis 和本地缓存。

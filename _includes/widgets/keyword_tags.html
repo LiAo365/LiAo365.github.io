@@ -1,0 +1,11 @@
+{%- comment -%}
+  Row of topic keyword chips. Usage:
+  {% include widgets/keyword_tags.html items=item.keywords %}
+{%- endcomment -%}
+{%- if include.items -%}
+<p class="mt-2 mb-0 keyword-row">
+    {%- for word in include.items -%}
+    <span class="keyword-tag">{{ word }}</span>
+    {%- endfor -%}
+</p>
+{%- endif -%}

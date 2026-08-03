@@ -22,11 +22,11 @@ positions_zh:
 email: "li_ao_365@outlook.com"
 # cv_link: /assets/files/cv_en.pdf
 # cv_link_zh: /assets/files/cv_zh.pdf
-# gscholar: your_google_scholar_id
+gscholar: "_8duX8AAAAAJ"   # profile URL is built from this ID
 github: LiAo365
+orcid: "0000-0001-9010-3078"
 # twitter: your_twitter_id
 # linkedin: your-linked-in-id
-# orcid: 0000-0000-0000-0000
 
 short_bio_text_justify: false
 short_bio: >-
@@ -46,6 +46,10 @@ short_bio: >-
   <p>
     I have published 2 first-author CCF-A papers at ACM MM and 1 JCR Q1 journal paper at IEEE TCSVT.
   </p>
+  <p>
+    I am currently looking for <strong>internship or full-time algorithm/research engineer</strong> opportunities.
+    Feel free to reach out if you think we might be a good fit!
+  </p>
 
 short_bio_zh: >-
   <p>
@@ -61,6 +65,9 @@ short_bio_zh: >-
   </p>
   <p>
     已发表 2 篇 CCF-A 类会议论文（ACM MM，一作）与 1 篇中科院一区期刊论文（IEEE TCSVT，一作）。
+  </p>
+  <p>
+    目前正在寻找<strong>算法/研究工程师方向的实习或全职</strong>机会，欢迎联系交流！
   </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
@@ -79,13 +86,17 @@ education:
   position: >-
     School of Computer Science <br/>
     M.S. in Computer Application Technology
+  details:
+  - "Coursework ranked top 10% of cohort (Rank: 8/84)"
   date: Sep. 2018 - Jun. 2021
 - name: North University of China
   logo: /assets/images/badges/NUC.png
   position: >-
     School of Information and Communication Engineering <br/>
     B.E. in Communication Engineering
-  date: Sep. 2014 - Jun. 2018
+  details:
+  - "GPA: 3.59 / 4.0 (Top 10% of cohort)"
+  date: Sep. 2014 - Jul. 2018
 
 education_zh:
 - name: 重庆大学
@@ -99,13 +110,17 @@ education_zh:
   position: >-
     计算机学院 <br/>
     计算机应用技术 硕士研究生
+  details:
+  - "课程成绩：专业前 10%；排名：8/84"
   date: 2018.09 - 2021.06
 - name: 中北大学
   logo: /assets/images/badges/NUC.png
   position: >-
     信息与通信工程学院 <br/>
     通信工程 本科
-  date: 2014.09 - 2018.06
+  details:
+  - "GPA：3.59 / 4.0（专业前 10%）"
+  date: 2014.09 - 2018.07
 
 experience:
 - name: A*STAR Singapore
@@ -114,6 +129,17 @@ experience:
     CFAR Group <br/>
     CSC-funded Visiting Ph.D., advised by Prof. Joey Tianyi Zhou
   date: Sep. 2025 - Aug. 2026
+- name: Chongqing City Management University
+  logo: /assets/images/badges/CSWU.png
+  position: Full-time Lecturer
+  details:
+  - "Courses taught: Python/C++ Programming, Embedded Systems Development"
+  date: Sep. 2021 - Sep. 2023
+- name: Meituan
+  logo: /assets/images/badges/MTDX.png
+  dept: Enterprise Platform R&D Department
+  position: Software System Development Intern
+  date: May. 2020 - Aug. 2020
 
 experience_zh:
 - name: 新加坡科技研究局 A*STAR
@@ -122,14 +148,45 @@ experience_zh:
     CFAR Group <br/>
     国家公派联合培养博士，导师：Prof. Joey Tianyi Zhou
   date: 2025.09 - 2026.08
+- name: 重庆城市管理职业大学
+  logo: /assets/images/badges/CSWU.png
+  position: 专任教师
+  details:
+  - "主讲课程：Python/C++ 程序设计、嵌入式系统开发"
+  date: 2021.09 - 2023.09
+- name: 美团点评
+  logo: /assets/images/badges/MTDX.png
+  dept: 企业平台研发部
+  position: 系统开发实习生
+  date: 2020.05 - 2020.08
 
 awards:
 - name: China Scholarship Council (CSC) Scholarship for Joint Ph.D. Program
   date: 2025
+- name: Chongqing University Class-A Graduate Scholarship (x3)
+  date: 2020 / 2019 / 2018
+- name: Second Prize, 16th Huawei Cup Mathematical Contest in Modeling
+  date: Dec. 2019
+- name: "Patent: A Method for Optimization and Fusion Ranking of Domain-Specific Word Vectors"
+  date: Mar. 2019
+- name: Third Prize (National Finals), Blue Bridge Cup Software Competition
+  date: May 2017
+- name: National Encouragement Scholarship
+  date: Dec. 2015
 
 awards_zh:
 - name: 国家留学基金委（CSC）公派联合培养博士研究生奖学金
   date: 2025
+- name: 重庆大学研究生A类奖学金（三次）
+  date: 2020 / 2019 / 2018
+- name: 第十六届华为杯数学建模二等奖
+  date: 2019年12月
+- name: "专利：一种领域化词向量的优化及融合排序方法"
+  date: 2019年03月
+- name: 蓝桥杯软件类国赛三等奖
+  date: 2017年05月
+- name: 国家励志奖学金
+  date: 2015年12月
 
 # Shown on the "More" page.
 skills:

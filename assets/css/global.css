@@ -191,6 +191,46 @@ hr {
     font-weight: 500;
 }
 
+/* ===== Topic keyword chips (publications + projects) =====
+   Weight 500 rather than bold: enough to lift them off the muted abstract text
+   without competing with the title or breaking the flat, low-contrast look. */
+.keyword-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.keyword-tag {
+    display: inline-block;
+    background-color: #eef2f7;
+    color: #4a7298;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    padding: 0.12rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* ===== Project tech stack line ===== */
+.tech-stack {
+    color: #6c757d;
+}
+
+.tech-stack-label {
+    font-weight: 500;
+    color: #2d3436;
+}
+
+.tech-stack-label.lang-en::after {
+    content: ": ";
+}
+
+.tech-stack-label.lang-zh::after {
+    content: "：";
+}
+
 .project-highlights li {
     margin-bottom: 0.35rem;
     line-height: 1.6;

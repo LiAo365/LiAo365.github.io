@@ -27,6 +27,7 @@ all_publications: "全部论文"
 # 项目
 projects: "项目经历"
 projects_subtitle: "部分科研与工程项目。"
+tech_stack: "技术栈"
 
 # 博客
 blog: "个人博客"

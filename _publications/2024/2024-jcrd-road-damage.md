@@ -10,6 +10,10 @@ abstract: >-
   A content-aware interpretable model for road damage detection, providing both accurate localization and explainable predictions.
 abstract_zh: >-
   提出内容感知的可解释性路面病害检测模型，在精确定位病害的同时给出可解释的预测依据。
+keywords:
+  - Road Damage Detection
+  - Interpretability
+  - Content-aware Modeling
 authors:
   - Ao Li
   - Yongxin Ge
