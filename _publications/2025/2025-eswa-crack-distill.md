@@ -26,5 +26,5 @@ authors:
   - Ling Xu
   - Yongxin Ge
 links:
-  # Paper: https://doi.org/10.1016/j.eswa.2024.125734
+  Paper: https://www.sciencedirect.com/science/article/pii/S0957417424026010
 ---

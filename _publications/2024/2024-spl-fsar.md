@@ -21,5 +21,5 @@ authors:
   - Bingxin Zhou
   - Yongxin Ge
 links:
-  # Paper: https://doi.org/10.1109/LSP.2024.3456670
+  Paper: https://ieeexplore.ieee.org/abstract/document/10669816/
 ---

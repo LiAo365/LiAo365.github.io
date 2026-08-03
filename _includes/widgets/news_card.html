@@ -11,7 +11,12 @@
                 {% for item in year.items %}
                 <div class="my-1 d-flex">
                     <div>{% if item.title_zh %}<span class="lang-en">{{ item.title }}</span><span class="lang-zh">{{ item.title_zh }}</span>{% else %}{{ item.title }}{% endif %}</div>
-                    <div class="ml-auto mt-auto pl-2 text-muted no-break"><i>{{ item.date | date: "%b %d" }}</i></div>
+                    {%- comment -%}
+                      Month only. Most of these events (acceptance, award, arrival) are
+                      remembered by month, not day; showing "%b %d" invited made-up days.
+                      The day component in each file still controls ordering.
+                    {%- endcomment -%}
+                    <div class="ml-auto mt-auto pl-2 text-muted no-break"><i>{{ item.date | date: "%b" }}</i></div>
                 </div>
                 {% endfor %}
             </div>

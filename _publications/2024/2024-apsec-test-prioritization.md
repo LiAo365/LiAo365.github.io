@@ -24,5 +24,5 @@ authors:
   - Ling Xu
   - Yongxin Ge
 links:
-  # Paper: https://doi.org/10.1109/APSEC64467.2024.00039
+  Paper: https://ieeexplore.ieee.org/abstract/document/10967174/
 ---

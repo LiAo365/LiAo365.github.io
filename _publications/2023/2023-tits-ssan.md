@@ -23,5 +23,5 @@ authors:
   - Huijun Liu
   - Yongxin Ge
 links:
-  # Paper: https://doi.org/10.1109/TITS.2023.3312218
+  Paper: https://ieeexplore.ieee.org/abstract/document/10260260/
 ---

@@ -21,5 +21,5 @@ authors:
   - Ao Li
   - Yongxin Ge
 links:
-  # Paper: https://doi.org/10.1016/j.ins.2025.121986
+  Paper: https://www.sciencedirect.com/science/article/pii/S0020025525001185
 ---
