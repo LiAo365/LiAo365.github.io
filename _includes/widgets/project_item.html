@@ -4,13 +4,13 @@
 {%- endcomment -%}
 {% assign item = include.item %}
 
-<div class="p-3 p-md-4 {% unless include.hide_bottom_border %}border-bottom border-gray{% endunless %}">
+<div class="p-3 p-md-4 list-row {% unless include.hide_bottom_border %}border-bottom border-gray{% endunless %}">
     <div class="d-flex align-items-start">
         {%- comment -%} Keep the text column aligned whether or not there is a logo. {%- endcomment -%}
         {% if item.logo %}
         <img src="{{ item.logo | relative_url }}" alt="" style="width: 26px;" class="mr-3 mt-1 d-none d-sm-block">
         {% else %}
-        <span class="mr-3 mt-1 d-none d-sm-block text-center text-muted" style="width: 26px;"><i class="fas fa-folder-open"></i></span>
+        <span class="project-icon-fallback mr-3 mt-1 d-none d-sm-block"><i class="fas fa-folder-open"></i></span>
         {% endif %}
         <div class="flex-grow-1" style="min-width: 0;">
             <div class="d-flex flex-column flex-md-row">

@@ -1,7 +1,7 @@
 {% assign item = include.item %}
 {% assign hide_bottom_border = include.hide_bottom_border %}
 
-<div class="p-3 {% unless hide_bottom_border %}border-bottom border-gray{% endunless %}">
+<div class="p-3 list-row {% unless hide_bottom_border %}border-bottom border-gray{% endunless %}">
     <h5 class="mb-2">
         <a href="{{ item.url | relative_url }}" class="text-dark">
             {% if item.title_zh %}<span class="lang-en">{{ item.title }}</span><span class="lang-zh">{{ item.title_zh }}</span>{% else %}{{ item.title }}{% endif %}

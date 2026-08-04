@@ -2,6 +2,7 @@
 # Date source: Google Scholar publication date for this paper (2025-05-22).
 # Reworded from "accepted" to "published": the acceptance date is not recorded
 # anywhere I can source — replace both if you have the acceptance email.
+icon: "📄"
 title: >-
     Our paper on pre-trained semantics refinement for video temporal grounding is published in <strong>IEEE TCSVT</strong> (JCR Q1)!
 title_zh: >-

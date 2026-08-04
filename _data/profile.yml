@@ -46,10 +46,11 @@ short_bio: >-
   <p>
     I have published 2 first-author CCF-A papers at ACM MM and 1 JCR Q1 journal paper at IEEE TCSVT.
   </p>
-  <p>
+  <div class="callout-hire-me">
+    <i class="fas fa-paper-plane"></i>
     I am currently looking for <strong>internship or full-time algorithm/research engineer</strong> opportunities.
     Feel free to reach out if you think we might be a good fit!
-  </p>
+  </div>
 
 short_bio_zh: >-
   <p>
@@ -66,9 +67,10 @@ short_bio_zh: >-
   <p>
     已发表 2 篇 CCF-A 类会议论文（ACM MM，一作）与 1 篇中科院一区期刊论文（IEEE TCSVT，一作）。
   </p>
-  <p>
+  <div class="callout-hire-me">
+    <i class="fas fa-paper-plane"></i>
     目前正在寻找<strong>算法/研究工程师方向的实习或全职</strong>机会，欢迎联系交流！
-  </p>
+  </div>
 
 portrait_url: /assets/images/photos/portrait.jpg
 # portrait_caption: >-

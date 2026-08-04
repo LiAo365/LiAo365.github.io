@@ -11,7 +11,7 @@ navbar_title: More
         {%- comment -%} Skills {%- endcomment -%}
         {% if site.data.profile.skills %}
         <div class="my-3 bg-white rounded-xl" style="border: 1px solid #f0f0f0;">
-            <h5 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-code"></i> {% include i18n.html key="skills" %}</h5>
+            <h5 class="section-title p-3 mb-0 border-bottom border-gray"><i class="fas fa-code"></i> {% include i18n.html key="skills" %}</h5>
             <div class="p-3">
                 <div class="lang-en">{% include widgets/definition_list.html items=site.data.profile.skills %}</div>
                 <div class="lang-zh">{% include widgets/definition_list.html items=site.data.profile.skills_zh %}</div>
@@ -22,7 +22,7 @@ navbar_title: More
         {%- comment -%} Languages {%- endcomment -%}
         {% if site.data.profile.languages %}
         <div class="my-3 bg-white rounded-xl" style="border: 1px solid #f0f0f0;">
-            <h5 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-language"></i> {% include i18n.html key="languages" %}</h5>
+            <h5 class="section-title p-3 mb-0 border-bottom border-gray"><i class="fas fa-language"></i> {% include i18n.html key="languages" %}</h5>
             <div class="p-3">
                 <div class="lang-en">{% include widgets/definition_list.html items=site.data.profile.languages %}</div>
                 <div class="lang-zh">{% include widgets/definition_list.html items=site.data.profile.languages_zh %}</div>
@@ -33,7 +33,7 @@ navbar_title: More
         {%- comment -%} Honors & awards {%- endcomment -%}
         {% if site.data.profile.awards %}
         <div class="my-3 bg-white rounded-xl" style="border: 1px solid #f0f0f0;">
-            <h5 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-award"></i> {% include i18n.html key="honors_awards" %}</h5>
+            <h5 class="section-title p-3 mb-0 border-bottom border-gray"><i class="fas fa-award"></i> {% include i18n.html key="honors_awards" %}</h5>
             <div class="p-3">
                 <div class="lang-en">{% include widgets/award_list.html items=site.data.profile.awards %}</div>
                 <div class="lang-zh">{% include widgets/award_list.html items=site.data.profile.awards_zh %}</div>
@@ -46,7 +46,7 @@ navbar_title: More
         <div class="sticky-top" style="top: 80px;">
             <div class="mt-lg-5 pt-lg-4"></div>
             <div class="my-3 bg-white rounded-xl" style="border: 1px solid #f0f0f0;">
-                <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-link"></i> {% include i18n.html key="elsewhere" %}</h6>
+                <h6 class="section-title p-3 mb-0 border-bottom border-gray"><i class="fas fa-link"></i> {% include i18n.html key="elsewhere" %}</h6>
                 <div class="p-3 small d-flex flex-column" style="line-height: 2;">
                     {% include widgets/social_links.html %}
                     <a class="no-break" href="{{ '/showcase' | relative_url }}"><i class="fas fa-images"></i> {% include i18n.html key="showcase" %}</a>

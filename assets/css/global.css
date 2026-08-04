@@ -428,3 +428,138 @@ html.lang-active-zh .lang-en {
     color: #fff;
     font-weight: 500;
 }
+
+/* ===== Layout & style polish ===== */
+
+/* Hero name: tighter tracking reads more "designed"; clamp on narrow phones so
+   name + positions don't wrap to three lines under the portrait. */
+.h1.font-weight-normal {
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 575.98px) {
+    .h1.font-weight-normal {
+        font-size: 2rem;
+    }
+}
+
+/* Section header icon: same accent color everywhere a card/subsection has an
+   icon + label heading (News, Selected Publications, Education, More page...),
+   so the whole site reads as one system rather than per-widget one-offs. */
+.section-title i {
+    color: #4a7298;
+}
+
+/* Sub-headings inside a shared card (Education / Experience / Honors on the
+   homepage) get a hairline rule of their own, distinct from the full-width
+   card headers which already have border-bottom + padding. */
+.subsection-title {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* "Open to work" callout in the bio: the one paragraph a recruiter most needs
+   to notice, so it gets a tinted box instead of blending into plain prose. */
+.callout-hire-me {
+    margin-top: 1rem;
+    padding: 0.85rem 1.1rem;
+    background-color: #eef4f9;
+    border: 1px solid #d8e6ee;
+    border-left: 3px solid #4a7298;
+    border-radius: 0.6rem;
+}
+
+.callout-hire-me i {
+    color: #4a7298;
+    margin-right: 0.4rem;
+}
+
+/* Active navbar tab: a small underline in addition to the bold+dark text,
+   so the current page is legible at a glance rather than requiring a re-read. */
+.navbar .nav-link {
+    position: relative;
+}
+
+.navbar .nav-item.active .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0;
+    height: 2px;
+    background-color: #4a7298;
+    border-radius: 2px;
+}
+
+/* Publications/Blog year sidebar: left accent bar on the active year plus a
+   hover color, matching the blog table-of-contents' active-link treatment. */
+#navbar-year .nav-link {
+    border-left: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#navbar-year .nav-link:hover {
+    color: #4a7298;
+}
+
+#navbar-year .nav-link.active {
+    border-left-color: #4a7298;
+}
+
+/* Awards: hairline dividers instead of bullet points, consistent with the
+   dividers used between news-year groups and publication/project rows. */
+.award-list li {
+    padding: 0.4rem 0;
+}
+
+.award-list li + li {
+    border-top: 1px dashed #f0f0f0;
+}
+
+/* Project entries without a real institution logo get a designed placeholder
+   badge instead of a bare gray icon, so it reads as intentional. */
+.project-icon-fallback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #eef2f7;
+    color: #4a7298;
+    font-size: 0.75rem;
+}
+
+/* Publication cover thumbnails: force a consistent aspect ratio so real cover
+   images and the generated bubble-hash placeholders line up the same way,
+   regardless of the source image's native size. */
+.col-md-3.col-xl-2 > img.lazy,
+.col-md-3.col-xl-2 > svg.bubble-visual-hash {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border: 1px solid #f0f0f0;
+    border-radius: 0.4rem !important;
+}
+
+/* Subtle hover tint on list rows (publications, projects, blog posts) to
+   invite the click without adding any shadow/motion. */
+.list-row {
+    transition: background-color 0.15s ease;
+}
+
+.list-row:hover {
+    background-color: #fafbfc;
+}
+
+/* News feed item: sized between the muted meta text (0.8rem) and full body
+   copy (1rem) — large enough to read as content, not so large that a feed of
+   six one-line entries feels heavy. */
+.news-item-title {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.news-icon {
+    margin-right: 0.4rem;
+}

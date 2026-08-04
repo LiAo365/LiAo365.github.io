@@ -10,7 +10,7 @@
                     {% if site.data.profile.education %}
                     <div class="col-lg-6">
                         <div class="mx-2 my-1">
-                            <h5>{% include i18n.html key="education" %}</h5>
+                            <h5 class="section-title subsection-title"><i class="fas fa-graduation-cap"></i> {% include i18n.html key="education" %}</h5>
                             <div class="lang-en">{% include widgets/timeline_list.html items=site.data.profile.education %}</div>
                             <div class="lang-zh">{% include widgets/timeline_list.html items=site.data.profile.education_zh %}</div>
                         </div>
@@ -20,7 +20,7 @@
                     {% if site.data.profile.experience %}
                     <div class="col-lg-6">
                         <div class="mx-2 my-1 mt-4 mt-lg-1">
-                            <h5>{% include i18n.html key="experience" %}</h5>
+                            <h5 class="section-title subsection-title"><i class="fas fa-briefcase"></i> {% include i18n.html key="experience" %}</h5>
                             <div class="lang-en">{% include widgets/timeline_list.html items=site.data.profile.experience %}</div>
                             <div class="lang-zh">{% include widgets/timeline_list.html items=site.data.profile.experience_zh %}</div>
                         </div>
@@ -32,7 +32,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mx-2 my-1 mt-4">
-                            <h5>{% include i18n.html key="honors_awards" %}</h5>
+                            <h5 class="section-title subsection-title"><i class="fas fa-award"></i> {% include i18n.html key="honors_awards" %}</h5>
                             <div class="lang-en">{% include widgets/award_list.html items=site.data.profile.awards %}</div>
                             <div class="lang-zh">{% include widgets/award_list.html items=site.data.profile.awards_zh %}</div>
                         </div>
