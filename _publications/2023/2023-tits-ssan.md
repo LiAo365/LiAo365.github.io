@@ -4,7 +4,7 @@ title_zh:       "面向路面病害分类域自适应的自监督对抗学习"
 date:           2023-09-22 00:01:00 +0800
 selected:       false
 pub:            "IEEE Transactions on Intelligent Transportation Systems"
-pub_last:       ' <span class="badge badge-pill badge-publication badge-primary">CCF-B</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">JCR Q1</span> <span class="badge badge-pill badge-publication badge-primary">CCF-B</span>'
 pub_date:       "2023"
 abstract: >-
   SSAN classifies pavement distress on unlabeled target datasets by combining adversarial domain adaptation with self-supervision, addressing the small spatial footprint of distress regions.

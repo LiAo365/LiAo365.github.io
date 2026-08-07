@@ -25,6 +25,11 @@ email: "li_ao_365@outlook.com"
 gscholar: "_8duX8AAAAAJ"   # profile URL is built from this ID
 github: LiAo365
 orcid: "0000-0001-9010-3078"
+wechat_qrcode: /assets/images/photos/WeChat.png
+wechat_prompt: >-
+  Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my WeChat. Thanks!
+wechat_prompt_zh: >-
+  添加时请备注<strong>姓名</strong>和<strong>单位</strong>（在读/曾就读均可），谢谢！
 # twitter: your_twitter_id
 # linkedin: your-linked-in-id
 
@@ -82,6 +87,9 @@ education:
   position: >-
     School of Big Data & Software Engineering <br/>
     Ph.D. Candidate in Software Engineering
+  details:
+  - "Research: Multimodal Video Understanding, Video Temporal Grounding, Efficient MLLM Inference"
+  - 'Advisor: <a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">Prof. Yongxin Ge</a>'
   date: Sep. 2023 - Jun. 2027 (Expected)
 - name: Chongqing University
   logo: /assets/images/badges/CQU.png
@@ -89,6 +97,8 @@ education:
     School of Computer Science <br/>
     M.S. in Computer Application Technology
   details:
+  - "Research: Object Detection, Image Data Augmentation, Road Damage Detection"
+  - 'Advisor: <a href="https://faculty.cqu.edu.cn/HuijunLiu/zh_CN/index.htm" target="_blank">Prof. Huijun Liu</a>'
   - "Coursework ranked top 10% of cohort (Rank: 8/84)"
   date: Sep. 2018 - Jun. 2021
 - name: North University of China
@@ -106,6 +116,9 @@ education_zh:
   position: >-
     大数据与软件学院 <br/>
     软件工程 学术型博士研究生
+  details:
+  - "主要研究方向：多模态视频理解、视频时序定位、Efficient MLLM Inference"
+  - '导师：<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>'
   date: 2023.09 - 2027.06（预计）
 - name: 重庆大学
   logo: /assets/images/badges/CQU.png
@@ -113,6 +126,8 @@ education_zh:
     计算机学院 <br/>
     计算机应用技术 硕士研究生
   details:
+  - "主要研究方向：目标检测、图像数据增强、路面病害检测"
+  - '导师：<a href="https://faculty.cqu.edu.cn/HuijunLiu/zh_CN/index.htm" target="_blank">刘慧君教授</a>'
   - "课程成绩：专业前 10%；排名：8/84"
   date: 2018.09 - 2021.06
 - name: 中北大学
@@ -130,6 +145,8 @@ experience:
   position: >-
     CFAR Group <br/>
     CSC-funded Visiting Ph.D., advised by Prof. Joey Tianyi Zhou
+  details:
+  - "Research: Efficient Inference of Multimodal LLMs on Video Data"
   date: Sep. 2025 - Aug. 2026
 - name: Chongqing City Management University
   logo: /assets/images/badges/CSWU.png
@@ -149,6 +166,8 @@ experience_zh:
   position: >-
     CFAR Group <br/>
     国家公派联合培养博士，导师：Prof. Joey Tianyi Zhou
+  details:
+  - "研究内容：多模态大语言模型在视频数据的高效推理"
   date: 2025.09 - 2026.08
 - name: 重庆城市管理职业大学
   logo: /assets/images/badges/CSWU.png
@@ -193,19 +212,19 @@ awards_zh:
 # Shown on the "More" page.
 skills:
 - name: Programming
-  items: Python, C/C++, Java; solid grounding in data structures and algorithms.
+  items: Python, C/C++, Java; solid grounding in data structures and algorithms; working knowledge of network protocols, databases, and operating system fundamentals.
 - name: Frameworks & Tools
-  items: PyTorch, Transformers / PEFT, DeepSpeed; Linux, Git, Docker; Label Studio (secondary development).
+  items: PyTorch, Transformers / PEFT, DeepSpeed, Prompt Engineering; Linux, Git, Docker; Label Studio (secondary development).
 - name: Research
-  items: Multimodal video understanding, video temporal grounding, weakly-supervised temporal action localization, efficient MLLM inference.
+  items: Multimodal video understanding, long-video content understanding, video temporal grounding & moment retrieval, weakly-supervised temporal action localization; efficient MLLM inference (hallucination suppression, reliability measurement and guarantees).
 
 skills_zh:
 - name: 编程语言
-  items: Python，熟悉 C/C++、Java；熟悉常用数据结构与算法。
+  items: Python，熟悉 C/C++、Java；熟悉常用数据结构与算法，了解常用网络协议、数据库与操作系统基本原理。
 - name: 框架与工具
-  items: PyTorch、Transformers / PEFT、DeepSpeed；Linux、Git、Docker；Label Studio（二次开发经验）。
+  items: PyTorch、Transformers / PEFT、DeepSpeed、Prompt Engineering；Linux、Git、Docker；Label Studio（二次开发经验）。
 - name: 研究方向
-  items: 多模态视频理解、视频时序定位、弱监督时序动作定位、多模态大模型高效推理。
+  items: 多模态视频理解、长视频内容理解、视频时序定位与时刻检索、弱监督时序动作定位；多模态大模型高效推理（幻觉抑制、可靠性度量与保证）。
 
 languages:
 - name: English

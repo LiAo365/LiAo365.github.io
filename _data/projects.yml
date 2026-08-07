@@ -1,25 +1,28 @@
 # Projects shown on /projects, newest first.
 # Each entry has an English block and a matching `_zh` block; `highlights` is a list
 # of bullet points and may contain inline HTML.
+#
+# `tech_stack` is intentionally short (3-5 items): the handful of things that would
+# actually match an algorithm-role JD, not a full inventory of everything touched.
+# Proper nouns (PyTorch, YOLOv8, vLLM, ...) aren't translated for the _zh variant.
 
 projects:
 - title: AIGC Video Content Detection
   title_zh: AIGC 视频内容检测
-  role: Team Member — video data synthesis & video understanding
-  role_zh: 参与成员 — 负责视频数据合成与视频理解模块
+  role: Module Lead — Video Synthesis & Video Understanding
+  role_zh: 子模块负责人 — 负责视频数据合成与视频理解模块
   date: Oct. 2025 - Aug. 2026
   date_zh: 2025.10 - 2026.08
-  tags: [Multimodal LLM, Video Understanding, Agent System]
-  tech: Python · PyTorch · <strong>Transformers / PEFT</strong> · DeepSpeed · <strong>Multimodal LLMs</strong> · <strong>Video Generation Models</strong> · <strong>Multi-agent Orchestration</strong>
-  tech_zh: Python · PyTorch · <strong>Transformers / PEFT</strong> · DeepSpeed · <strong>多模态大模型</strong> · <strong>视频生成模型</strong> · <strong>多智能体编排</strong>
+  tags: [Multimodal LLM, Agent System, Contrastive Decoding]
+  tech_stack: [LangGraph, Qwen + vLLM, Function Calling / MCP, Prompt Engineering]
   highlights:
-  - Extended a video synthesis pipeline covering multiple generative models and forgery types (full-clip generation, local tampering, real/fake splicing); produced 300h+ of evaluation data supporting system-level assessment and iteration.
-  - Designed and implemented a long-video understanding agent system in which perception / analysis / decision agents cooperate through tool calls and intermediate reasoning to perform hierarchical understanding and segment-level localization on hour-long videos.
-  - Proposed SECD (Subspace Entropic Contrastive Decoding) to suppress temporal hallucination in lightweight MLLMs — training-free and plug-and-play. Published at <strong>ACM MM 2026</strong> (first author).
+  - Extended the evaluation video synthesis pipeline, integrating multiple generative models and forgery types (full-clip generation / local tampering / real-fake splicing), with automatic generation of frame-level masks and interval timestamp ground truth to support system-level evaluation and iteration.
+  - Designed and implemented a long-video understanding agent system with perception / analysis / decision multi-role collaboration, wrapping shot segmentation, face tracking, and frequency- and temporal-domain forensics as tools to achieve hierarchical understanding and segment-level localization of hour-long videos.
+  - Proposed <strong>SECD</strong> (Subspace Entropic Contrastive Decoding) to address hallucination, accuracy bias, and unreliable confidence of lightweight MLLMs in temporal grounding — training-free and plug-and-play. Published at <strong>ACM MM 2026</strong> (first author, CCF-A), with 2 concurrent <strong>AAAI</strong> submissions under review.
   highlights_zh:
-  - 完善视频数据合成 Pipeline，覆盖多种生成模型与全片生成 / 局部篡改 / 真伪拼接等多类伪造形态，累计合成 300h+ 有效评测数据，支撑系统能力评估与迭代。
-  - 负责长视频内容理解 Agent System 的设计与实现，由感知 / 分析 / 决策多角色 agent 协同，结合工具调用与中间推理结果，完成小时级视频的分层理解与逐段定位。
-  - 针对轻量级 MLLM 在时序定位中的幻觉问题（视觉证据不足时退化为语言先验、输出貌似合理但无依据的时间戳），提出子空间熵对比解码 SECD，训练无关、即插即用；成果发表于 <strong>ACM MM 2026</strong>（一作）。
+  - 完善评测视频数据合成 Pipeline，接入多种生成模型与全片生成 / 局部篡改 / 真伪拼接等多类伪造形态，实现帧级掩膜与区间时间戳 GT 的自动生成，支撑系统能力评估与迭代。
+  - 设计并实现长视频内容理解 Agent System，感知 / 分析 / 决策多角色协同，将镜头分割、人脸追踪、频域与时序取证等能力封装为工具（tools），完成小时级视频的分层理解与逐段定位。
+  - 针对轻量级 MLLM 在时序定位中的幻觉、精度偏差、可靠性缺失等问题，提出训练无关、即插即用的<strong>子空间熵对比解码 SECD</strong>；成果发表于 <strong>ACM MM 2026</strong>（一作，CCF-A），并有同期 2 篇 <strong>AAAI</strong> 在投论文。
 
 - title: Intelligent Road Damage Recognition and Application
   title_zh: 道路路面病害智能识别技术研究与应用
@@ -31,15 +34,14 @@ projects:
   date_zh: 2022.12 - 2025.12
   logo: /assets/images/badges/CQU.png
   tags: [Object Detection, Data Augmentation, Data Platform]
-  tech: Python · PyTorch · <strong>YOLO</strong> · <strong>Label Studio (secondary development)</strong> · <strong>Copy-Paste / Mix-Up</strong> · Docker · Linux
-  tech_zh: Python · PyTorch · <strong>YOLO</strong> · <strong>Label Studio（二次开发）</strong> · <strong>Copy-Paste / Mix-Up</strong> · Docker · Linux
+  tech_stack: [YOLO, Label Studio, PEFT, Copy-Paste / Mix-Up]
   highlights:
-  - Built a data platform on top of <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> (secondary development) covering cleaning, augmentation, model-assisted annotation and verification; processed roughly 600K expressway images.
+  - Built a data platform on <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> (secondary development) covering cleaning, augmentation, model-assisted annotation and verification; processed roughly 600K expressway images.
   - Established a pre-annotation → manual correction → retraining loop, raising pre-annotation usability to 95% across 100K+ annotation records.
   - Integrated Copy-Paste and Mix-Up augmentation and fine-tuned YOLO detectors, bringing the miss rate on long-tail defects below 0.5%; delivered for production use.
   highlights_zh:
-  - 基于 <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> 二次开发数据平台，覆盖清洗、增强、模型辅助标注与核验，处理约 60W 张快速路图像数据。
-  - 构建自定义模型预标注 — 人工修正 — 重训练闭环，预标注可用率提升至 95%，累计处理超 10W 条标注数据。
+  - 基于 <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> 二次开发数据平台，覆盖清洗、增强、模型辅助标注与核验，处理约 60 万张快速路图像数据。
+  - 构建自定义模型预标注—人工修正—重训练闭环，预标注可用率提升至 95%，累计处理超 10 万条标注数据。
   - 集成 Copy-Paste、Mix-Up 等数据增强策略，微调 YOLO 检测模型，实现长尾病害漏检率 &lt;0.5%，并交付使用。
 
 - title: Ascend & MindSpore Community Development Program
@@ -52,8 +54,7 @@ projects:
   date: Oct. 2021 - Jun. 2022
   date_zh: 2021.10 - 2022.06
   tags: [C++, Operator Development, MindSpore]
-  tech: C++ · <strong>Ascend CANN</strong> · <strong>MindSpore</strong> · <strong>Custom Operator Development</strong> · Unit Testing & Benchmarking
-  tech_zh: C++ · <strong>Ascend CANN</strong> · <strong>MindSpore</strong> · <strong>自定义算子开发</strong> · 单元测试与性能基准
+  tech_stack: [C++, Ascend CANN, MindSpore, Eigen, PyTest]
   highlights:
   - Developed 8 custom operators in C++ on the Ascend platform, covering operator registration, forward/backward computation, unit testing and performance benchmarking, then integrated them into the MindSpore framework.
   - All operators met MindSpore's official standards for computational efficiency and precision, and were successfully delivered and merged into the framework.
@@ -70,9 +71,8 @@ projects:
   role_zh: 系统开发实习生
   date: May. 2020 - Aug. 2020
   date_zh: 2020.05 - 2020.08
-  tags: [Backend Development, MQ, Kafka, Caching]
-  tech: Java · <strong>MQ</strong> · <strong>Kafka</strong> · <strong>Redis</strong> · Local Cache
-  tech_zh: Java · <strong>MQ</strong> · <strong>Kafka</strong> · <strong>Redis</strong> · 本地缓存
+  tags: [Backend Development, Kafka, Caching]
+  tech_stack: [Java, Kafka, Redis, Local Cache]
   highlights:
   - Designed, developed and optimized a message push service, integrating MQ to enable asynchronous batch message sending and a generic, reusable template design.
   - Independently designed and developed the certificate feature, the closed-loop certification course workflow, and URL-based video upload; used Kafka as the messaging middleware.

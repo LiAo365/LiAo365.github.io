@@ -169,21 +169,60 @@ hr {
     min-height: 100px;
 }
 
+/* Venue-rank badges (CCF-A, JCR Q1, ...): the one signal a recruiter scans for
+   first. Earlier this used five unrelated hues in a small-radius box — bold
+   enough to notice, but a rainbow next to the single-hue, fully-rounded
+   keyword chips two lines below made the card feel like two unrelated tag
+   systems. A same-hue redesign fixed the clash but then lost tier
+   differentiation entirely (CCF-B looked identical to CCF-C). This is the
+   middle ground: one hue family, three intensities, so rank is still legible
+   at a glance without a new color entering the page.
+     - Top   (CCF-A, JCR Q1, CCF Chinese T1 — top of their respective lists):
+       solid fill.
+     - Mid   (CCF-B): a mid-saturation tint, clearly darker than Low.
+     - Low   (CCF-C): the same pale tint as the topic keyword chips.
+   When a venue qualifies for more than one (e.g. IEEE TCSVT is both JCR Q1
+   and CCF-B), both badges are shown with the higher tier listed first. */
 .badge-publication {
-    font-size: 85%;
-    font-weight: 500;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
     letter-spacing: 0.02em;
-    border-radius: 4px;
-    padding: 0.25em 0.6em;
+    line-height: 1.5;
+    border-radius: 999px;
+    padding: 0.1em 0.65em;
+    margin-left: 0.3rem;
+    vertical-align: 1px;
     border: none;
 }
 
-.badge-publication.badge-success  { background-color: #e8f5e9; color: #4a8c5c; }
-.badge-publication.badge-warning  { background-color: #fff8e1; color: #b8860b; }
-.badge-publication.badge-info     { background-color: #e3f2fd; color: #5085a5; }
-.badge-publication.badge-danger   { background-color: #fce4ec; color: #c06070; }
-.badge-publication.badge-primary  { background-color: #e8eaf6; color: #5c6bc0; }
-.badge-publication.badge-secondary{ background-color: #f5f5f5; color: #777; }
+/* Top tier: CCF-A, JCR Q1, CCF Chinese T1. */
+.badge-publication.badge-danger,
+.badge-publication.badge-info,
+.badge-publication.badge-warning {
+    background-color: #4a7298;
+    color: #fff;
+}
+
+/* Mid tier: CCF-B. */
+.badge-publication.badge-primary {
+    background-color: #aec4d8;
+    color: #1f3f57;
+}
+
+/* Low tier: CCF-C (badge-success kept in the same tier for parity — unused
+   in the current publication list). */
+.badge-publication.badge-secondary,
+.badge-publication.badge-success {
+    background-color: #eef2f7;
+    color: #4a7298;
+}
+
+.badge-publication.badge-danger,
+.badge-publication.badge-info {
+    background-color: #4a7298;
+    color: #fff;
+}
 
 .badge-light {
     background-color: #f5f5f5;
@@ -192,8 +231,18 @@ hr {
 }
 
 /* ===== Topic keyword chips (publications + projects) =====
-   Weight 500 rather than bold: enough to lift them off the muted abstract text
-   without competing with the title or breaking the flat, low-contrast look. */
+   One flat blue for every tag read as monotonous with enough chips on the page
+   to notice. This is a small categorical palette instead — five hues, one per
+   research/work area (video understanding, vision & detection, learning
+   paradigms, multimodal LLM & agents, systems & engineering) — validated with
+   the dataviz skill's CVD checker against every pair of categories that actually
+   co-occurs on a single card in this site's real data (not an abstract
+   worst case: this palette's 8 hues can't all pass pairwise at once, so a
+   validated-safe subset picked for *this* data is the correct scope). Weight
+   500 keeps them from competing with the title; the hue is what differentiates
+   them from the equally-important-but-deliberately-monochrome rank badges above,
+   and from the outlined, neutral tech-stack chips below. See
+   _data/keyword_categories.yml for the tag → category mapping. */
 .keyword-row {
     display: flex;
     flex-wrap: wrap;
@@ -202,8 +251,6 @@ hr {
 
 .keyword-tag {
     display: inline-block;
-    background-color: #eef2f7;
-    color: #4a7298;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.01em;
@@ -213,22 +260,47 @@ hr {
     white-space: nowrap;
 }
 
-/* ===== Project tech stack line ===== */
-.tech-stack {
-    color: #6c757d;
+.tag-video     { background-color: #eaf2fb; color: #2a78d6; }
+.tag-vision    { background-color: #fdf1ed; color: #eb6834; }
+.tag-learning  { background-color: #e6f2ee; color: #0a7d52; }
+.tag-mllm      { background-color: #efedf7; color: #4a3aa7; }
+.tag-systems   { background-color: #f8ecf1; color: #b83e70; }
+
+/* ===== Project tech stack chips =====
+   Deliberately a short, curated list (3-5 items) rather than a full inventory —
+   the point is to surface what an algorithm-role JD would actually keyword-match
+   on, not to be exhaustive. Outlined rather than filled, so next to the filled
+   keyword-tag topic pills the two rows read as distinct but related: "what this
+   project is about" (filled) vs. "what I built it with" (outlined). Same accent
+   hue as everything else on the page — no new color introduced. */
+.tech-stack-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
 }
 
 .tech-stack-label {
+    font-size: 0.75rem;
     font-weight: 500;
-    color: #2d3436;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-right: 0.15rem;
 }
 
-.tech-stack-label.lang-en::after {
-    content: ": ";
-}
-
-.tech-stack-label.lang-zh::after {
-    content: "：";
+.tech-chip {
+    display: inline-block;
+    background-color: transparent;
+    color: #4a7298;
+    border: 1px solid #c7d7e3;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
 }
 
 .project-highlights li {

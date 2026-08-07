@@ -4,7 +4,7 @@ title_zh:       "面向轻量化路面裂缝检测的域自适应与知识蒸馏
 date:           2025-03-05 00:01:00 +0800
 selected:       false
 pub:            "Expert Systems with Applications"
-pub_last:       ' <span class="badge badge-pill badge-publication badge-info">JCR Q1</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">JCR Q1</span> <span class="badge badge-pill badge-publication badge-secondary">CCF-C</span>'
 pub_date:       "2025"
 abstract: >-
   A lightweight domain-adaptive crack detection network whose distillation loss carries domain information, transferring knowledge from large teachers to students small enough for mobile and edge deployment.

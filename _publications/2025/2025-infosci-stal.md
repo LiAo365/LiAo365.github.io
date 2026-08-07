@@ -4,7 +4,7 @@ title_zh:       "面向弱监督时序动作定位的自监督时序自适应学
 date:           2025-07-01 00:01:00 +0800
 selected:       false
 pub:            "Information Sciences"
-pub_last:       ' <span class="badge badge-pill badge-publication badge-primary">CCF-B</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">JCR Q1</span> <span class="badge badge-pill badge-publication badge-primary">CCF-B</span>'
 pub_date:       "2025"
 abstract: >-
   A self-supervised temporal adaptive learning framework that builds erase-and-reconstruct pretext tasks, letting the model perceive continuous temporal information from video-level labels alone.

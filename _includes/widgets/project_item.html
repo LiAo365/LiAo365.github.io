@@ -30,18 +30,19 @@
             {% if item.tags %}
             <div class="mb-2 keyword-row">
                 {% for tag in item.tags %}
-                <span class="keyword-tag">{{ tag }}</span>
+                {%- assign cat = site.data.keyword_categories[tag] | default: "video" -%}
+                <span class="keyword-tag tag-{{ cat }}">{{ tag }}</span>
                 {% endfor %}
             </div>
             {% endif %}
 
-            {%- if item.tech -%}
-            <div class="tech-stack small mb-2">
-                {%- comment -%} No stray whitespace around the label: it would show up before the colon. {%- endcomment -%}
-                <span class="tech-stack-label lang-en">{{ site.data.i18n.en.tech_stack }}</span
-                ><span class="tech-stack-label lang-zh">{{ site.data.i18n.zh.tech_stack }}</span
-                ><span class="lang-en">{{ item.tech }}</span
-                ><span class="lang-zh">{{ item.tech_zh | default: item.tech }}</span>
+            {%- if item.tech_stack -%}
+            <div class="tech-stack-row mb-2">
+                <span class="tech-stack-label lang-en">{{ site.data.i18n.en.tech_stack }}</span>
+                <span class="tech-stack-label lang-zh">{{ site.data.i18n.zh.tech_stack }}</span>
+                {% for tech in item.tech_stack %}
+                <span class="tech-chip">{{ tech }}</span>
+                {% endfor %}
             </div>
             {%- endif -%}
 

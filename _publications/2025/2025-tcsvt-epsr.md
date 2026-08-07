@@ -4,7 +4,7 @@ title_zh:       "面向视频时序定位的高效预训练语义精炼"
 date:           2025-05-22 00:01:00 +0800
 selected:       true
 pub:            "IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT)"
-pub_last:       ' <span class="badge badge-pill badge-publication badge-info">JCR Q1</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">JCR Q1</span> <span class="badge badge-pill badge-publication badge-primary">CCF-B</span>'
 pub_date:       "2025"
 abstract: >-
   We propose zero-parameter bidirectional modality knowledge propagation and content-context contrastive learning to refine pre-trained VLM representations for VTG, achieving state-of-the-art on 6 benchmarks.

@@ -1,0 +1,61 @@
+# Maps every keyword/tag string used on the site (publications + projects) to one
+# of 5 color categories, so topic tags read as an organized taxonomy rather than
+# a wall of identical blue chips. See _includes/widgets/keyword_tags.html and
+# project_item.html for where this is consumed, and assets/css/global.css
+# (search "tag-video") for the palette itself.
+#
+# The 5 categories and their render order (fixed, for CVD-safety — see the
+# comment above .tag-video in global.css): video, vision, learning, mllm, systems.
+#
+# Unmapped tags fall back to "video" (the site's primary/default hue). If you add
+# a new keyword, add it here — otherwise it silently renders as that default.
+
+# --- Video & Temporal Understanding ---
+Video Temporal Grounding: video
+Temporal Action Localization: video
+Action Recognition: video
+Memory Bank: video
+Feature Aggregation: video
+
+# --- Vision & Detection ---
+Object Detection: vision
+Crack Detection: vision
+Road Damage Detection: vision
+Multi-scale Features: vision
+Interpretability: vision
+Content-aware Modeling: vision
+Knowledge Distillation: vision
+Lightweight Model: vision
+Distress Classification: vision
+Data Augmentation: vision
+
+# --- Learning Paradigms ---
+Weakly-supervised Learning: learning
+Self-supervised Learning: learning
+Domain Adaptation: learning
+Adversarial Learning: learning
+Causal Inference: learning
+Few-shot Learning: learning
+Clustering: learning
+Single-frame Supervision: learning
+Active Learning: learning
+Contrastive Learning: learning
+
+# --- Multimodal LLM & Agents ---
+Multimodal LLM: mllm
+Contrastive Decoding: mllm
+Hallucination Mitigation: mllm
+Vision-Language Model: mllm
+Cross-modal Alignment: mllm
+Agent System: mllm
+
+# --- Systems & Engineering ---
+Software Testing: systems
+Test Prioritization: systems
+Uncertainty Estimation: systems
+C++: systems
+Operator Development: systems
+MindSpore: systems
+Backend Development: systems
+Kafka: systems
+Caching: systems

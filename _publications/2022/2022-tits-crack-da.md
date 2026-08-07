@@ -4,7 +4,7 @@ title_zh:       "面向路面裂缝检测的深度域自适应方法"
 date:           2022-12-02 00:01:00 +0800
 selected:       false
 pub:            "IEEE Transactions on Intelligent Transportation Systems"
-pub_last:       ' <span class="badge badge-pill badge-publication badge-primary">CCF-B</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">JCR Q1</span> <span class="badge badge-pill badge-publication badge-primary">CCF-B</span>'
 pub_date:       "2022"
 abstract: >-
   A dual-branch weight-shared crack detection network that learns domain-invariant features and builds intermediate domains from aggregated multi-scale features, removing the need for dense annotation on the target domain.

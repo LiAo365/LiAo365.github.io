@@ -6,8 +6,9 @@
                 <img src="{{ site.data.profile.wechat_qrcode | relative_url }}" class="img-fluid">
             </div>
             {% if site.data.profile.wechat_prompt %}
-            <div class="modal-body p-1">
-                {{ site.data.profile.wechat_prompt }}
+            <div class="modal-body p-1 small text-muted">
+                <div class="lang-en">{{ site.data.profile.wechat_prompt }}</div>
+                <div class="lang-zh">{{ site.data.profile.wechat_prompt_zh | default: site.data.profile.wechat_prompt }}</div>
             </div>
             {% endif %}
             <div class="modal-footer">
