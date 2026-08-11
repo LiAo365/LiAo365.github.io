@@ -39,14 +39,16 @@ short_bio: >-
     I am a Ph.D. candidate in Software Engineering at
     <a href="https://www.cqu.edu.cn/" target="_blank">Chongqing University</a>,
     advised by <a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">Prof. Yongxin Ge</a>.
-    My research focuses on <strong>multimodal video understanding</strong>, <strong>video temporal grounding</strong>,
-    and <strong>moment retrieval</strong>.
+    My research centers on three directions: <strong>efficient MLLM inference</strong>
+    (hallucination suppression, reliability measurement and guarantees, training-free & plug-and-play methods),
+    <strong>long-video temporal understanding</strong> (temporal grounding and moment retrieval), and
+    <strong>multimodal agents</strong> (tool-use and multi-role orchestration for hour-long video understanding).
   </p>
   <p>
     I am currently a CSC-funded visiting researcher at
     <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group),
     working with <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
-    on efficient reasoning of multimodal LLMs on video data.
+    on efficient inference of multimodal LLMs on video tasks and agent deployment.
   </p>
   <p>
     I have published 2 first-author CCF-A papers at ACM MM and 1 JCR Q1 journal paper at IEEE TCSVT.
@@ -61,13 +63,15 @@ short_bio_zh: >-
   <p>
     我是<a href="https://www.cqu.edu.cn/" target="_blank">重庆大学</a>软件工程专业博士研究生，
     师从<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>。
-    主要研究方向为<strong>多模态视频理解</strong>、<strong>视频时序定位</strong>与<strong>视频时刻检索</strong>。
+    主要研究方向为：<strong>高效多模态大模型推理</strong>（幻觉抑制、可靠性度量与保证、训练无关即插即用方法）、
+    <strong>长视频时序理解</strong>（视频时序定位与时刻检索），以及<strong>多模态 Agent</strong>
+    （面向小时级视频理解的工具调用与多角色协同编排）。
   </p>
   <p>
     目前在<a href="https://www.a-star.edu.sg/" target="_blank">新加坡科技研究局（A*STAR）</a> CFAR Group
     进行国家公派联合培养，导师为
     <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>，
-    研究内容为多模态大语言模型在视频数据上的高效推理。
+    研究内容为多模态大语言模型在视频任务上的高效推理与 Agent 应用落地。
   </p>
   <p>
     已发表 2 篇 CCF-A 类会议论文（ACM MM，一作）与 1 篇中科院一区期刊论文（IEEE TCSVT，一作）。
@@ -88,7 +92,7 @@ education:
     School of Big Data & Software Engineering <br/>
     Ph.D. Candidate in Software Engineering
   details:
-  - "Research: Multimodal Video Understanding, Video Temporal Grounding, Efficient MLLM Inference"
+  - "Research: Multimodal Video Understanding, Efficient Long-Video Inference, Efficient MLLM Inference"
   - 'Advisor: <a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">Prof. Yongxin Ge</a>'
   date: Sep. 2023 - Jun. 2027 (Expected)
 - name: Chongqing University
@@ -117,7 +121,7 @@ education_zh:
     大数据与软件学院 <br/>
     软件工程 学术型博士研究生
   details:
-  - "主要研究方向：多模态视频理解、视频时序定位、Efficient MLLM Inference"
+  - "主要研究方向：多模态视频理解、长视频高效推理、多模态大模型高效推理"
   - '导师：<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>'
   date: 2023.09 - 2027.06（预计）
 - name: 重庆大学
@@ -146,7 +150,7 @@ experience:
     CFAR Group <br/>
     CSC-funded Visiting Ph.D., advised by Prof. Joey Tianyi Zhou
   details:
-  - "Research: Efficient Inference of Multimodal LLMs on Video Data"
+  - "Research: Efficient Inference of Multimodal LLMs on Video Tasks and Agent Deployment"
   date: Sep. 2025 - Aug. 2026
 - name: Chongqing City Management University
   logo: /assets/images/badges/CSWU.png
@@ -167,7 +171,7 @@ experience_zh:
     CFAR Group <br/>
     国家公派联合培养博士，导师：Prof. Joey Tianyi Zhou
   details:
-  - "研究内容：多模态大语言模型在视频数据的高效推理"
+  - "研究内容：多模态大语言模型在视频任务的高效推理与 Agent 应用落地"
   date: 2025.09 - 2026.08
 - name: 重庆城市管理职业大学
   logo: /assets/images/badges/CSWU.png

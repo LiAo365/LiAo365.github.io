@@ -7,21 +7,23 @@
 # Proper nouns (PyTorch, YOLOv8, vLLM, ...) aren't translated for the _zh variant.
 
 projects:
-- title: AIGC Video Content Detection
-  title_zh: AIGC 视频内容检测
+- title: "Multimodal Agent System: Long-Video Understanding & AIGC Content Detection"
+  title_zh: "多模态 Agent 系统：长视频理解与 AIGC 内容检测"
   role: Module Lead — Video Synthesis & Video Understanding
   role_zh: 子模块负责人 — 负责视频数据合成与视频理解模块
   date: Oct. 2025 - Aug. 2026
   date_zh: 2025.10 - 2026.08
   tags: [Multimodal LLM, Agent System, Contrastive Decoding]
-  tech_stack: [LangGraph, Qwen + vLLM, Function Calling / MCP, Prompt Engineering]
+  tech_stack: [LangGraph, Qwen + vLLM, Function Calling / MCP, Prompt Engineering, Pydantic]
   highlights:
-  - Extended the evaluation video synthesis pipeline, integrating multiple generative models and forgery types (full-clip generation / local tampering / real-fake splicing), with automatic generation of frame-level masks and interval timestamp ground truth to support system-level evaluation and iteration.
   - Designed and implemented a long-video understanding agent system with perception / analysis / decision multi-role collaboration, wrapping shot segmentation, face tracking, and frequency- and temporal-domain forensics as tools to achieve hierarchical understanding and segment-level localization of hour-long videos.
+  - "Agent orchestration and reliability: implemented state management and failure retry across multi-turn tool calls with <strong>LangGraph</strong>, and enforced strict tool-return schemas with <strong>Pydantic</strong> to keep the system stable under long tool-call chains."
+  - Extended the evaluation video synthesis pipeline, integrating multiple generative models and forgery types (full-clip generation / local tampering / real-fake splicing), with automatic generation of frame-level masks and interval timestamp ground truth to support system-level evaluation and iteration.
   - Proposed <strong>SECD</strong> (Subspace Entropic Contrastive Decoding) to address hallucination, accuracy bias, and unreliable confidence of lightweight MLLMs in temporal grounding — training-free and plug-and-play. Published at <strong>ACM MM 2026</strong> (first author, CCF-A), with 2 concurrent <strong>AAAI</strong> submissions under review.
   highlights_zh:
-  - 完善评测视频数据合成 Pipeline，接入多种生成模型与全片生成 / 局部篡改 / 真伪拼接等多类伪造形态，实现帧级掩膜与区间时间戳 GT 的自动生成，支撑系统能力评估与迭代。
   - 设计并实现长视频内容理解 Agent System，感知 / 分析 / 决策多角色协同，将镜头分割、人脸追踪、频域与时序取证等能力封装为工具（tools），完成小时级视频的分层理解与逐段定位。
+  - Agent 编排与可靠性保证：基于 <strong>LangGraph</strong> 实现多轮调用的状态管理与失败重试，以 <strong>Pydantic</strong> 强约束工具返回结构，保障系统在长链路调用下的稳定性。
+  - 完善评测视频数据合成 Pipeline，接入多种生成模型与全片生成 / 局部篡改 / 真伪拼接等多类伪造形态，实现帧级掩膜与区间时间戳 GT 的自动生成，支撑系统能力评估与迭代。
   - 针对轻量级 MLLM 在时序定位中的幻觉、精度偏差、可靠性缺失等问题，提出训练无关、即插即用的<strong>子空间熵对比解码 SECD</strong>；成果发表于 <strong>ACM MM 2026</strong>（一作，CCF-A），并有同期 2 篇 <strong>AAAI</strong> 在投论文。
 
 - title: Intelligent Road Damage Recognition and Application
