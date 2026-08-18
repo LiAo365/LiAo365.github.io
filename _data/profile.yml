@@ -42,13 +42,13 @@ short_bio: >-
     My research centers on three directions: <strong>efficient MLLM inference</strong>
     (hallucination suppression, reliability measurement and guarantees, training-free & plug-and-play methods),
     <strong>long-video temporal understanding</strong> (temporal grounding and moment retrieval), and
-    <strong>multimodal agents</strong> (tool-use and multi-role orchestration for hour-long video understanding).
+    <strong>multimodal agents</strong> (agentic harness design, tool-use and multi-role orchestration for hour-long video understanding).
   </p>
   <p>
     I am currently a CSC-funded visiting researcher at
     <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group),
     working with <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
-    on efficient inference of multimodal LLMs on video tasks and agent deployment.
+    on efficient & agentic MLLM inference and on-device MLLM reliability.
   </p>
   <p>
     I have published 2 first-author CCF-A papers at ACM MM and 1 JCR Q1 journal paper at IEEE TCSVT.
@@ -65,13 +65,13 @@ short_bio_zh: >-
     师从<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>。
     主要研究方向为：<strong>高效多模态大模型推理</strong>（幻觉抑制、可靠性度量与保证、训练无关即插即用方法）、
     <strong>长视频时序理解</strong>（视频时序定位与时刻检索），以及<strong>多模态 Agent</strong>
-    （面向小时级视频理解的工具调用与多角色协同编排）。
+    （agentic harness 设计、面向小时级视频理解的工具调用与多角色协同编排）。
   </p>
   <p>
     目前在<a href="https://www.a-star.edu.sg/" target="_blank">新加坡科技研究局（A*STAR）</a> CFAR Group
     进行国家公派联合培养，导师为
     <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>，
-    研究内容为多模态大语言模型在视频任务上的高效推理与 Agent 应用落地。
+    研究内容为多模态大模型的高效推理及 Agentic 应用落地、端侧 MLLM 可靠性度量。
   </p>
   <p>
     已发表 2 篇 CCF-A 类会议论文（ACM MM，一作）与 1 篇中科院一区期刊论文（IEEE TCSVT，一作）。
@@ -92,9 +92,18 @@ education:
     School of Big Data & Software Engineering <br/>
     Ph.D. Candidate in Software Engineering
   details:
-  - "Research: Multimodal Video Understanding, Efficient Long-Video Inference, Efficient MLLM Inference"
+  - "Research: Multimodal Video Understanding, Lightweight MLLM Fine-tuning & Inference"
   - 'Advisor: <a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">Prof. Yongxin Ge</a>'
   date: Sep. 2023 - Jun. 2027 (Expected)
+- name: A*STAR Singapore
+  logo: /assets/images/badges/ASTAR.png
+  position: >-
+    Institute of Advanced Intelligence and Computing <br/>
+    CSC-funded Visiting Ph.D.
+  details:
+  - "Research: Efficient & Agentic MLLM Inference; On-Device MLLM Reliability"
+  - 'Advisor: <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>'
+  date: Sep. 2025 - Aug. 2026
 - name: Chongqing University
   logo: /assets/images/badges/CQU.png
   position: >-
@@ -121,9 +130,18 @@ education_zh:
     大数据与软件学院 <br/>
     软件工程 学术型博士研究生
   details:
-  - "主要研究方向：多模态视频理解、长视频高效推理、多模态大模型高效推理"
+  - "主要研究方向：多模态视频理解、长视频高效推理、多模态大模型轻量化微调与推理"
   - '导师：<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>'
   date: 2023.09 - 2027.06（预计）
+- name: 新加坡科技研究局 A*STAR
+  logo: /assets/images/badges/ASTAR.png
+  position: >-
+    Institute of Advanced Intelligence and Computing <br/>
+    CSC 公派联合培养博士
+  details:
+  - "主要研究方向：多模态大模型的高效推理及 Agentic 应用落地、端侧 MLLM 可靠性度量"
+  - '导师：<a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>'
+  date: 2025.09 - 2026.08
 - name: 重庆大学
   logo: /assets/images/badges/CQU.png
   position: >-
@@ -150,7 +168,7 @@ experience:
     CFAR Group <br/>
     CSC-funded Visiting Ph.D., advised by Prof. Joey Tianyi Zhou
   details:
-  - "Research: Efficient Inference of Multimodal LLMs on Video Tasks and Agent Deployment"
+  - "Research: Efficient & Agentic MLLM Inference; On-Device MLLM Reliability"
   date: Sep. 2025 - Aug. 2026
 - name: Chongqing City Management University
   logo: /assets/images/badges/CSWU.png
@@ -171,7 +189,7 @@ experience_zh:
     CFAR Group <br/>
     国家公派联合培养博士，导师：Prof. Joey Tianyi Zhou
   details:
-  - "研究内容：多模态大语言模型在视频任务的高效推理与 Agent 应用落地"
+  - "研究内容：多模态大模型的高效推理及 Agentic 应用落地、端侧 MLLM 可靠性度量"
   date: 2025.09 - 2026.08
 - name: 重庆城市管理职业大学
   logo: /assets/images/badges/CSWU.png
@@ -215,20 +233,24 @@ awards_zh:
 
 # Shown on the "More" page.
 skills:
-- name: Programming
-  items: Python, C/C++, Java; solid grounding in data structures and algorithms; working knowledge of network protocols, databases, and operating system fundamentals.
-- name: Frameworks & Tools
-  items: PyTorch, Transformers / PEFT, DeepSpeed, Prompt Engineering; Linux, Git, Docker; Label Studio (secondary development).
-- name: Research
-  items: Multimodal video understanding, long-video content understanding, video temporal grounding & moment retrieval, weakly-supervised temporal action localization; efficient MLLM inference (hallucination suppression, reliability measurement and guarantees).
+- name: Fine-tuning & Deployment
+  items: Proficient with PyTorch, Transformers, PEFT (LoRA); vLLM inference deployment and acceleration; familiar with mainstream multimodal LLM architectures such as Qwen-VL.
+- name: Multimodal & Agents
+  items: MLLM inference optimization; multi-agent orchestration and agentic-harness design with LangGraph; Function Calling / MCP tool-chains; Context Engineering.
+- name: Computer Vision
+  items: Video temporal grounding, weakly-supervised temporal action localization, object detection; data augmentation, large-scale automated annotation, and synthesis.
+- name: HPC & Engineering
+  items: Python, C/C++, Java; custom operator development on Ascend/CANN; Linux, Git, Docker; working knowledge of network protocols, databases, and OS fundamentals.
 
 skills_zh:
-- name: 编程语言
-  items: Python，熟悉 C/C++、Java；熟悉常用数据结构与算法，了解常用网络协议、数据库与操作系统基本原理。
-- name: 框架与工具
-  items: PyTorch、Transformers / PEFT、DeepSpeed、Prompt Engineering；Linux、Git、Docker；Label Studio（二次开发经验）。
-- name: 研究方向
-  items: 多模态视频理解、长视频内容理解、视频时序定位与时刻检索、弱监督时序动作定位；多模态大模型高效推理（幻觉抑制、可靠性度量与保证）。
+- name: 模型微调与部署
+  items: 熟悉 PyTorch / Transformers / PEFT (LoRA) 微调；vLLM 推理部署；Qwen 等主流多模态大模型架构。
+- name: 多模态与 Agent
+  items: 了解 LangGraph 多 Agent 编排、agentic harness；Function Calling / MCP；Context Engineering。
+- name: 计算机视觉
+  items: 熟悉视频时序定位、弱监督时序动作定位、目标检测；数据增广、数据自动化标注与合成。
+- name: 高性能与工程
+  items: Python、C/C++、Java；Linux、Git、Docker；了解常用网络协议、数据库与操作系统基本原理。
 
 languages:
 - name: English

@@ -13,18 +13,31 @@ projects:
   role_zh: 子模块负责人 — 负责视频数据合成与视频理解模块
   date: Oct. 2025 - Aug. 2026
   date_zh: 2025.10 - 2026.08
-  tags: [Multimodal LLM, Agent System, Contrastive Decoding]
-  tech_stack: [LangGraph, Qwen + vLLM, Function Calling / MCP, Prompt Engineering, Pydantic]
+  tags: [Multimodal LLM, Agent System, Long-Video Understanding]
+  tech_stack: [LangGraph, Qwen-VL + vLLM, Function Calling / MCP, Context Engineering, Agentic Harness]
   highlights:
-  - Designed and implemented a long-video understanding agent system with perception / analysis / decision multi-role collaboration, wrapping shot segmentation, face tracking, and frequency- and temporal-domain forensics as tools to achieve hierarchical understanding and segment-level localization of hour-long videos.
-  - "Agent orchestration and reliability: implemented state management and failure retry across multi-turn tool calls with <strong>LangGraph</strong>, and enforced strict tool-return schemas with <strong>Pydantic</strong> to keep the system stable under long tool-call chains."
-  - Extended the evaluation video synthesis pipeline, integrating multiple generative models and forgery types (full-clip generation / local tampering / real-fake splicing), with automatic generation of frame-level masks and interval timestamp ground truth to support system-level evaluation and iteration.
-  - Proposed <strong>SECD</strong> (Subspace Entropic Contrastive Decoding) to address hallucination, accuracy bias, and unreliable confidence of lightweight MLLMs in temporal grounding — training-free and plug-and-play. Published at <strong>ACM MM 2026</strong> (first author, CCF-A), with 2 concurrent <strong>AAAI</strong> submissions under review.
+  - "<strong>Forged-Video Data Synthesis:</strong> Led the synthesis pipeline through a three-stage evolution: (1) refactored the hard-coded workflow into a standardized tool suite with broader forgery types; (2) upgraded to a fixed-orchestration Agent system with tool calls + agent evaluation for free composition of forgery modes; (3) evolved into an <strong>agentic harness</strong> that learns new forgery strategies from human-feedback samples and distills them into reusable skills, breaking preset-mode boundaries to reach long-tail cases. Deception rate against the deployed detector rose from <strong>13%</strong> to <strong>48%</strong>."
+  - "<strong>Hierarchical Long-Video Understanding:</strong> For hour-long videos far exceeding the MLLM context window, built a perception–analysis–decision multi-agent architecture, wrapping segmentation, tracking, and temporal forensics as tools dispatched through Function Calling / MCP. A global-summary → candidate-recall → in-segment-localization hierarchy enabled segment-level grounding with a traceable evidence chain, raising temporal-grounding IoU from <strong>54%</strong> to <strong>72%</strong>."
   highlights_zh:
-  - 设计并实现长视频内容理解 Agent System，感知 / 分析 / 决策多角色协同，将镜头分割、人脸追踪、频域与时序取证等能力封装为工具（tools），完成小时级视频的分层理解与逐段定位。
-  - Agent 编排与可靠性保证：基于 <strong>LangGraph</strong> 实现多轮调用的状态管理与失败重试，以 <strong>Pydantic</strong> 强约束工具返回结构，保障系统在长链路调用下的稳定性。
-  - 完善评测视频数据合成 Pipeline，接入多种生成模型与全片生成 / 局部篡改 / 真伪拼接等多类伪造形态，实现帧级掩膜与区间时间戳 GT 的自动生成，支撑系统能力评估与迭代。
-  - 针对轻量级 MLLM 在时序定位中的幻觉、精度偏差、可靠性缺失等问题，提出训练无关、即插即用的<strong>子空间熵对比解码 SECD</strong>；成果发表于 <strong>ACM MM 2026</strong>（一作，CCF-A），并有同期 2 篇 <strong>AAAI</strong> 在投论文。
+  - "<strong>视频数据伪造合成：</strong>主导合成链路三轮演进：(1) 将硬编码固定 workflow 重构为标准化工具链并扩展伪造类型；(2) 升级为固定编排的 Agent 系统，以工具调用 + Agent 评估实现多种伪造形态自由组合；(3) 演进为 <strong>agentic harness</strong>，让 Agent 从人工反馈样本中学习新伪造方式并沉淀为可复用 skill，突破预设形态边界、持续覆盖长尾伪造形态。合成数据对现有系统欺骗成功率由 <strong>13%</strong> 提升至 <strong>48%</strong>。"
+  - "<strong>长视频分层理解：</strong>针对小时级视频远超 MLLM 上下文窗口、直接推理信息稀释严重的问题，构建感知—分析—决策多 Agent 架构，将分割、追踪、时序取证封装为工具并经 Function Calling / MCP 调度，以全局摘要—候选段召回—段内精定位分层推理，实现小时级视频逐段定位与可追溯证据链，时序定位 IoU 由 <strong>54%</strong> 提升至 <strong>72%</strong>。"
+
+- title: "Reliable Inference & Guarantees for On-Device MLLMs"
+  title_zh: "端侧多模态大模型的可靠推理与保证研究"
+  role: Research Lead
+  role_zh: 研究负责人
+  date: Oct. 2025 - Aug. 2026
+  date_zh: 2025.10 - 2026.08
+  tags: [Contrastive Decoding, Bayes Risk, Conformal Prediction, MLLM]
+  tech_stack: [Contrastive Decoding, Bayes Risk Minimization, Conformal Risk Control, Transformers]
+  highlights:
+  - "<strong>Temporal-Hallucination Suppression (SECD):</strong> Under weak visual evidence, MLLMs fall back on linguistic priors and emit well-formatted yet numerically wrong timestamps. Proposed <strong>Subspace Entropic Contrastive Decoding (SECD)</strong>, which isolates the numeric subspace and aggregates layer-wise references via renormalized entropy, confining calibration to boundary-deciding tokens; training-free and plug-and-play, with gains up to <strong>+5.0</strong> R@0.7 across five VTG benchmarks. Accepted at <strong>ACM MM 2026</strong> (CCF-A)."
+  - "<strong>Numeric-Precision Optimization (NuMD):</strong> Greedy decoding collapses the model's implicit interval distribution into a point estimate. Proposed the <strong>Numerical Marginal Decoding (NuMD)</strong> framework, estimating the marginal via constrained sampling with importance correction and minimizing Bayes risk to approach Bayes-optimal prediction; training-free, consistently beating greedy decoding on five benchmarks with mIoU up to <strong>+5.4</strong>. Submitted to <strong>AAAI 2027</strong>."
+  - "<strong>Reliability Guarantee:</strong> Formalized reliable grounding as a risk-control problem, estimating per-boundary expansion from per-query repeated-sampling distributions and calibrating via <strong>conformal risk control</strong> for distribution-free, finite-sample guarantees; at target risk α=0.1, empirical risk stayed within <strong>0.09–0.11</strong> across 16 model configurations. Submitted to <strong>AAAI 2027</strong>."
+  highlights_zh:
+  - "<strong>时序幻觉抑制 (SECD)：</strong>针对 MLLM 在视觉证据不足时退化为语言先验产生时序幻觉的问题，提出<strong>子空间熵对比解码 (SECD)</strong>，动态隔离数值子空间并以多中间层重归一化熵聚合层级参考分布，将对比校准限定于决定时序边界的数值 token；训练无关、即插即用，5 个 VTG 基准 R@0.7 最高 <strong>+5.0</strong>。录用于 <strong>ACM MM 2026</strong>（CCF-A）。"
+  - "<strong>数值精度优化 (NuMD)：</strong>针对贪心解码将隐含时间区间分布坍缩为单点估计的问题，提出<strong>数值边际解码框架 (NuMD)</strong>，以约束采样限定合法数值路径、重要性修正估计边际分布，最小化贝叶斯风险逼近贝叶斯最优预测；训练无关，5 个基准一致优于贪心解码，mIoU 最高 <strong>+5.4</strong>。投稿 <strong>AAAI 2027</strong>。"
+  - "<strong>预测可靠性保证：</strong>将可靠时序定位形式化为风险控制问题，以同一查询多次采样的时间戳分布估计各边界外扩难度，经<strong>共形风险控制</strong>在校准集上标定，使期望漏检风险不超预设水平，提供无分布假设、有限样本保证；目标风险 α=0.1 下经验风险严控于 <strong>0.09–0.11</strong>，跨 16 个模型配置全部达标。投稿 <strong>AAAI 2027</strong>。"
 
 - title: Intelligent Road Damage Recognition and Application
   title_zh: 道路路面病害智能识别技术研究与应用
@@ -40,11 +53,11 @@ projects:
   highlights:
   - Built a data platform on <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> (secondary development) covering cleaning, augmentation, model-assisted annotation and verification; processed roughly 600K expressway images.
   - Established a pre-annotation → manual correction → retraining loop, raising pre-annotation usability to 95% across 100K+ annotation records.
-  - Integrated Copy-Paste and Mix-Up augmentation and fine-tuned YOLO detectors, bringing the miss rate on long-tail defects below 0.5%; delivered for production use.
+  - Integrated Copy-Paste and Mix-Up augmentation and fine-tuned YOLO detectors, bringing the miss rate on long-tail defects below 0.5%; locally integrated a Qwen3 model to auto-generate inspection reports with distress maps, statistics, and analyses. Delivered for production use.
   highlights_zh:
   - 基于 <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> 二次开发数据平台，覆盖清洗、增强、模型辅助标注与核验，处理约 60 万张快速路图像数据。
   - 构建自定义模型预标注—人工修正—重训练闭环，预标注可用率提升至 95%，累计处理超 10 万条标注数据。
-  - 集成 Copy-Paste、Mix-Up 等数据增强策略，微调 YOLO 检测模型，实现长尾病害漏检率 &lt;0.5%，并交付使用。
+  - 集成 Copy-Paste、Mix-Up 等数据增强策略，微调 YOLO 检测模型，实现长尾病害漏检率 &lt;0.5%；本地接入 Qwen3 模型，设计自动化巡检报告生成方案，可输出病害分布图、统计表格与分析报告。已交付使用。
 
 - title: Ascend & MindSpore Community Development Program
   title_zh: Ascend & MindSpore 昇腾众智计划
