@@ -36,27 +36,28 @@ wechat_prompt_zh: >-
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a Ph.D. candidate in Software Engineering at
+    I am a Ph.D. candidate at
     <a href="https://www.cqu.edu.cn/" target="_blank">Chongqing University</a>,
     advised by <a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">Prof. Yongxin Ge</a>.
-    My research centers on three directions: <strong>efficient MLLM inference</strong>
-    (hallucination suppression, reliability measurement and guarantees, training-free & plug-and-play methods),
+    My research spans <strong>efficient MLLM inference</strong>
+    (hallucination suppression, reliability guarantees, training-free & plug-and-play methods),
     <strong>long-video temporal understanding</strong> (temporal grounding and moment retrieval), and
-    <strong>multimodal agents</strong> (agentic harness design, tool-use and multi-role orchestration for hour-long video understanding).
+    <strong>multimodal agents</strong> (agentic harness design, tool-use and multi-agent orchestration for hour-long video reasoning).
   </p>
   <p>
-    I am currently a CSC-funded visiting researcher at
-    <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group),
-    working with <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
-    on efficient & agentic MLLM inference and on-device MLLM reliability.
+    I am currently visiting
+    <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group)
+    on a CSC fellowship, working with
+    <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
+    on efficient MLLM inference and agentic video understanding.
   </p>
   <p>
-    I have published 2 first-author CCF-A papers at ACM MM and 1 JCR Q1 journal paper at IEEE TCSVT.
+    I have 2 first-author CCF-A papers (ACM MM) and 1 JCR Q1 paper (IEEE TCSVT).
   </p>
   <div class="callout-hire-me">
     <i class="fas fa-paper-plane"></i>
-    I am currently looking for <strong>internship or full-time algorithm/research engineer</strong> opportunities.
-    Feel free to reach out if you think we might be a good fit!
+    I am looking for <strong>internship or full-time algorithm/research engineer</strong> roles —
+    happy to chat if you think there's a fit!
   </div>
 
 short_bio_zh: >-
@@ -234,13 +235,13 @@ awards_zh:
 # Shown on the "More" page.
 skills:
 - name: Fine-tuning & Deployment
-  items: Proficient with PyTorch, Transformers, PEFT (LoRA); vLLM inference deployment and acceleration; familiar with mainstream multimodal LLM architectures such as Qwen-VL.
+  items: PyTorch, Transformers, PEFT (LoRA); vLLM inference deployment and acceleration; hands-on with Qwen-VL and similar multimodal LLM architectures.
 - name: Multimodal & Agents
-  items: MLLM inference optimization; multi-agent orchestration and agentic-harness design with LangGraph; Function Calling / MCP tool-chains; Context Engineering.
+  items: MLLM inference optimization; LangGraph multi-agent orchestration, agentic-harness design; Function Calling / MCP tool chains; context engineering.
 - name: Computer Vision
   items: Video temporal grounding, weakly-supervised temporal action localization, object detection; data augmentation, large-scale automated annotation, and synthesis.
 - name: HPC & Engineering
-  items: Python, C/C++, Java; custom operator development on Ascend/CANN; Linux, Git, Docker; working knowledge of network protocols, databases, and OS fundamentals.
+  items: Python, C/C++, Java; Ascend/CANN operator development; Linux, Git, Docker; network protocols, databases, and OS fundamentals.
 
 skills_zh:
 - name: 模型微调与部署

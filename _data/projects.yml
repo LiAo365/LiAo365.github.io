@@ -16,8 +16,8 @@ projects:
   tags: [Multimodal LLM, Agent System, Long-Video Understanding]
   tech_stack: [LangGraph, Qwen-VL + vLLM, Function Calling / MCP, Context Engineering, Agentic Harness]
   highlights:
-  - "<strong>Forged-Video Data Synthesis:</strong> Led the synthesis pipeline through a three-stage evolution: (1) refactored the hard-coded workflow into a standardized tool suite with broader forgery types; (2) upgraded to a fixed-orchestration Agent system with tool calls + agent evaluation for free composition of forgery modes; (3) evolved into an <strong>agentic harness</strong> that learns new forgery strategies from human-feedback samples and distills them into reusable skills, breaking preset-mode boundaries to reach long-tail cases. Deception rate against the deployed detector rose from <strong>13%</strong> to <strong>48%</strong>."
-  - "<strong>Hierarchical Long-Video Understanding:</strong> For hour-long videos far exceeding the MLLM context window, built a perception–analysis–decision multi-agent architecture, wrapping segmentation, tracking, and temporal forensics as tools dispatched through Function Calling / MCP. A global-summary → candidate-recall → in-segment-localization hierarchy enabled segment-level grounding with a traceable evidence chain, raising temporal-grounding IoU from <strong>54%</strong> to <strong>72%</strong>."
+  - "Owned the forged-video synthesis module. Iterated the pipeline through three stages: (1) refactored the hard-coded workflow into a standardized tool suite with broader forgery types; (2) upgraded to an agent system with fixed orchestration, using tool calls + agent evaluation to freely compose forgery modes; (3) evolved into an <strong>agentic harness</strong> that learns new forgery strategies from human-feedback samples and distills them into reusable skills — covering long-tail cases that preset pipelines miss. Deception rate against the deployed detector: <strong>13% → 48%</strong>."
+  - "Owned the long-video understanding module. Hour-long videos blow past the MLLM context window, so I built a perception–analysis–decision multi-agent architecture that wraps segmentation, tracking, and temporal forensics as tools dispatched via Function Calling / MCP. A three-level hierarchy (global summary → candidate-segment recall → in-segment localization) gives segment-level grounding with a traceable evidence chain. Temporal IoU: <strong>54% → 72%</strong>."
   highlights_zh:
   - "<strong>视频数据伪造合成：</strong>主导合成链路三轮演进：(1) 将硬编码固定 workflow 重构为标准化工具链并扩展伪造类型；(2) 升级为固定编排的 Agent 系统，以工具调用 + Agent 评估实现多种伪造形态自由组合；(3) 演进为 <strong>agentic harness</strong>，让 Agent 从人工反馈样本中学习新伪造方式并沉淀为可复用 skill，突破预设形态边界、持续覆盖长尾伪造形态。合成数据对现有系统欺骗成功率由 <strong>13%</strong> 提升至 <strong>48%</strong>。"
   - "<strong>长视频分层理解：</strong>针对小时级视频远超 MLLM 上下文窗口、直接推理信息稀释严重的问题，构建感知—分析—决策多 Agent 架构，将分割、追踪、时序取证封装为工具并经 Function Calling / MCP 调度，以全局摘要—候选段召回—段内精定位分层推理，实现小时级视频逐段定位与可追溯证据链，时序定位 IoU 由 <strong>54%</strong> 提升至 <strong>72%</strong>。"
@@ -31,9 +31,9 @@ projects:
   tags: [Contrastive Decoding, Bayes Risk, Conformal Prediction, MLLM]
   tech_stack: [Contrastive Decoding, Bayes Risk Minimization, Conformal Risk Control, Transformers]
   highlights:
-  - "<strong>Temporal-Hallucination Suppression (SECD):</strong> Under weak visual evidence, MLLMs fall back on linguistic priors and emit well-formatted yet numerically wrong timestamps. Proposed <strong>Subspace Entropic Contrastive Decoding (SECD)</strong>, which isolates the numeric subspace and aggregates layer-wise references via renormalized entropy, confining calibration to boundary-deciding tokens; training-free and plug-and-play, with gains up to <strong>+5.0</strong> R@0.7 across five VTG benchmarks. Accepted at <strong>ACM MM 2026</strong> (CCF-A)."
-  - "<strong>Numeric-Precision Optimization (NuMD):</strong> Greedy decoding collapses the model's implicit interval distribution into a point estimate. Proposed the <strong>Numerical Marginal Decoding (NuMD)</strong> framework, estimating the marginal via constrained sampling with importance correction and minimizing Bayes risk to approach Bayes-optimal prediction; training-free, consistently beating greedy decoding on five benchmarks with mIoU up to <strong>+5.4</strong>. Submitted to <strong>AAAI 2027</strong>."
-  - "<strong>Reliability Guarantee:</strong> Formalized reliable grounding as a risk-control problem, estimating per-boundary expansion from per-query repeated-sampling distributions and calibrating via <strong>conformal risk control</strong> for distribution-free, finite-sample guarantees; at target risk α=0.1, empirical risk stayed within <strong>0.09–0.11</strong> across 16 model configurations. Submitted to <strong>AAAI 2027</strong>."
+  - "<strong>SECD</strong> — When visual evidence is thin, MLLMs fall back on language priors and produce well-formatted but numerically wrong timestamps. SECD isolates the numeric token subspace and aggregates layer-wise references via renormalized entropy, confining contrastive calibration to boundary-deciding tokens. Training-free, plug-and-play; up to <strong>+5.0</strong> R@0.7 across five VTG benchmarks. <strong>ACM MM 2026</strong> (CCF-A)."
+  - "<strong>NuMD</strong> — Greedy decoding collapses the model's implicit interval distribution to a point estimate, which is suboptimal under IoU metrics. NuMD estimates the marginal via constrained sampling with importance correction and minimizes Bayes risk to approach the Bayes-optimal prediction. Training-free; mIoU up to <strong>+5.4</strong> on five benchmarks. Submitted to <strong>AAAI 2027</strong>."
+  - "<strong>Conformal temporal grounding</strong> — MLLM timestamps come with no calibration: high confidence ≠ low error. We formalize this as a risk-control problem — sample timestamps repeatedly per query, estimate per-boundary expansion difficulty, and calibrate via <strong>conformal risk control</strong> for distribution-free, finite-sample guarantees. At α=0.1, empirical risk stays in <strong>0.09–0.11</strong> across 16 model configs. Submitted to <strong>AAAI 2027</strong>."
   highlights_zh:
   - "<strong>时序幻觉抑制 (SECD)：</strong>针对 MLLM 在视觉证据不足时退化为语言先验产生时序幻觉的问题，提出<strong>子空间熵对比解码 (SECD)</strong>，动态隔离数值子空间并以多中间层重归一化熵聚合层级参考分布，将对比校准限定于决定时序边界的数值 token；训练无关、即插即用，5 个 VTG 基准 R@0.7 最高 <strong>+5.0</strong>。录用于 <strong>ACM MM 2026</strong>（CCF-A）。"
   - "<strong>数值精度优化 (NuMD)：</strong>针对贪心解码将隐含时间区间分布坍缩为单点估计的问题，提出<strong>数值边际解码框架 (NuMD)</strong>，以约束采样限定合法数值路径、重要性修正估计边际分布，最小化贝叶斯风险逼近贝叶斯最优预测；训练无关，5 个基准一致优于贪心解码，mIoU 最高 <strong>+5.4</strong>。投稿 <strong>AAAI 2027</strong>。"
@@ -51,9 +51,9 @@ projects:
   tags: [Object Detection, Data Augmentation, Data Platform]
   tech_stack: [YOLO, Label Studio, PEFT, Copy-Paste / Mix-Up]
   highlights:
-  - Built a data platform on <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> (secondary development) covering cleaning, augmentation, model-assisted annotation and verification; processed roughly 600K expressway images.
-  - Established a pre-annotation → manual correction → retraining loop, raising pre-annotation usability to 95% across 100K+ annotation records.
-  - Integrated Copy-Paste and Mix-Up augmentation and fine-tuned YOLO detectors, bringing the miss rate on long-tail defects below 0.5%; locally integrated a Qwen3 model to auto-generate inspection reports with distress maps, statistics, and analyses. Delivered for production use.
+  - Extended <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> into a data management platform with cleaning, augmentation, model-assisted pre-annotation, and verification. Processed ~600K expressway images.
+  - Set up a pre-annotate → human-correct → retrain loop that brought pre-annotation usability to 95% over 100K+ records.
+  - Fine-tuned YOLO with Copy-Paste and Mix-Up augmentation, cutting the miss rate on long-tail defect types below 0.5%. Also plugged in a local Qwen3 model to auto-generate inspection reports with distress maps, statistics, and analyses. Shipped to production.
   highlights_zh:
   - 基于 <a href="https://github.com/HumanSignal/label-studio/" target="_blank">Label Studio</a> 二次开发数据平台，覆盖清洗、增强、模型辅助标注与核验，处理约 60 万张快速路图像数据。
   - 构建自定义模型预标注—人工修正—重训练闭环，预标注可用率提升至 95%，累计处理超 10 万条标注数据。
@@ -71,8 +71,8 @@ projects:
   tags: [C++, Operator Development, MindSpore]
   tech_stack: [C++, Ascend CANN, MindSpore, Eigen, PyTest]
   highlights:
-  - Developed 8 custom operators in C++ on the Ascend platform, covering operator registration, forward/backward computation, unit testing and performance benchmarking, then integrated them into the MindSpore framework.
-  - All operators met MindSpore's official standards for computational efficiency and precision, and were successfully delivered and merged into the framework.
+  - Wrote 8 custom operators in C++ for Ascend/CANN — forward/backward computation, tiling and vectorization for throughput — with unit tests and performance benchmarks. Registered and integrated into MindSpore.
+  - All operators met MindSpore's official precision and efficiency standards; delivered and merged upstream.
   highlights_zh:
   - 在 Ascend 平台使用 C++ 开发 8 个自定义算子，完成算子注册、前向 / 反向计算、单测与性能测试全流程，并在 MindSpore 框架中完成适配集成。
   - 所有算子的计算效率与精度均达到 MindSpore 官方标准，成功交付并合入框架。
@@ -89,9 +89,9 @@ projects:
   tags: [Backend Development, Kafka, Caching]
   tech_stack: [Java, Kafka, Redis, Local Cache]
   highlights:
-  - Designed, developed and optimized a message push service, integrating MQ to enable asynchronous batch message sending and a generic, reusable template design.
-  - Independently designed and developed the certificate feature, the closed-loop certification course workflow, and URL-based video upload; used Kafka as the messaging middleware.
-  - Optimized high-frequency API endpoints with a two-level (Redis + local) caching strategy, reducing TP999 latency to under 10ms.
+  - Built and optimized a message-push service, introducing MQ for async batch sending and a generic, reusable template framework that replaced duplicated push logic across business lines.
+  - Independently shipped the certificate feature, the closed-loop certification course workflow, and URL-based video upload end-to-end. Kafka as middleware.
+  - Added a two-level cache (Redis + local) on high-frequency API endpoints, bringing TP999 under 10 ms.
   highlights_zh:
   - 负责消息推送服务的方案设计、开发与优化，通过接入 MQ 等方式实现了异步批量消息发送以及整个模板的通用性设计与开发。
   - 独立完成证书功能、认证课功能闭环、通过 URL 上传视频等功能的方案设计与开发，熟悉并使用 Kafka 中间件。
