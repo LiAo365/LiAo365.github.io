@@ -9,14 +9,14 @@ positions:
 - name: Ph.D. Candidate in Software Engineering
 - name: Chongqing University
   logo: /assets/images/badges/CQU.png
-- name: Visiting Ph.D., A*STAR Singapore
+- name: Former Visiting Ph.D., A*STAR Singapore
   logo: /assets/images/badges/ASTAR.png
 
 positions_zh:
 - name: 软件工程 博士研究生
 - name: 重庆大学
   logo: /assets/images/badges/CQU.png
-- name: 新加坡科技研究局 A*STAR 联合培养博士
+- name: 新加坡科技研究局 A*STAR 联合培养博士（已结业）
   logo: /assets/images/badges/ASTAR.png
 
 email: "li_ao_365@outlook.com"
@@ -45,9 +45,9 @@ short_bio: >-
     <strong>multimodal agents</strong> (agentic harness design, tool-use and multi-agent orchestration for hour-long video reasoning).
   </p>
   <p>
-    I am currently visiting
-    <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group)
-    on a CSC fellowship, working with
+    I recently completed a one-year CSC-funded visit to
+    <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group),
+    where I worked with
     <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
     on efficient MLLM inference and agentic video understanding.
   </p>
@@ -69,8 +69,8 @@ short_bio_zh: >-
     （agentic harness 设计、面向小时级视频理解的工具调用与多角色协同编排）。
   </p>
   <p>
-    目前在<a href="https://www.a-star.edu.sg/" target="_blank">新加坡科技研究局（A*STAR）</a> CFAR Group
-    进行国家公派联合培养，导师为
+    已完成在<a href="https://www.a-star.edu.sg/" target="_blank">新加坡科技研究局（A*STAR）</a> CFAR Group
+    为期一年的国家公派联合培养，导师为
     <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>，
     研究内容为多模态大模型的高效推理及 Agentic 应用落地、端侧 MLLM 可靠性度量。
   </p>
