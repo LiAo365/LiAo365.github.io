@@ -36,24 +36,40 @@ wechat_prompt_zh: >-
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a Ph.D. candidate at
+    I am a Ph.D. candidate in Software Engineering at
     <a href="https://www.cqu.edu.cn/" target="_blank">Chongqing University</a>,
     advised by <a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">Prof. Yongxin Ge</a>.
-    My research spans <strong>efficient MLLM inference</strong>
-    (hallucination suppression, reliability guarantees, training-free & plug-and-play methods),
-    <strong>long-video temporal understanding</strong> (temporal grounding and moment retrieval), and
-    <strong>multimodal agents</strong> (agentic harness design, tool-use and multi-agent orchestration for hour-long video reasoning).
+    My research focuses on <strong>reliable AI</strong>, spanning efficient multimodal LLM inference,
+    long-video temporal understanding, and multimodal agents.
   </p>
   <p>
-    I recently completed a one-year CSC-funded visit to
-    <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a> (CFAR Group),
-    where I worked with
-    <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
-    on efficient MLLM inference and agentic video understanding.
+    I completed a <strong>12-month CSC-funded research visit</strong> at
+    <a href="https://www.a-star.edu.sg/" target="_blank">A*STAR Singapore</a>,
+    working with <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>
+    and broadening my international research perspective.
   </p>
-  <p>
-    I have 2 first-author CCF-A papers (ACM MM) and 1 JCR Q1 paper (IEEE TCSVT).
-  </p>
+  <ul class="pl-3 mb-3">
+    <li class="mb-2">
+      <strong>Rapid learning &amp; exploration.</strong>
+      I continually learn and apply emerging AI methods, extending my reliability research
+      in pretrained video understanding from I3D/C3D through CLIP to MLLMs, agents, and Agentic Harness.
+    </li>
+    <li class="mb-2">
+      <strong>Applied research &amp; systems engineering.</strong>
+      I extended an AI-assisted road-image annotation and management platform, achieving
+      <strong>95% usability</strong> for automated annotations; built an Agentic Harness synthesis system
+      for AIGC video detection, moving beyond preset data types to generate <strong>100+ hours</strong> of usable data;
+      and implemented a perception → analysis → evidence gathering → decision agent system
+      for precise event localization and traceable evidence in hour-long videos.
+    </li>
+    <li>
+      <strong>Research grounded in practice.</strong>
+      I turn project challenges into research questions, with <strong>2 CCF-A conference papers
+      and 1 JCR Q1 journal paper</strong> (all first-authored), plus 1 Chinese core journal paper published;
+      2 further CCF-A submissions are under review. I have also been responsible for drafting
+      provincial, municipal, and national project proposals that received funding.
+    </li>
+  </ul>
   <div class="callout-hire-me">
     <i class="fas fa-paper-plane"></i>
     I am looking for <strong>internship or full-time algorithm/research engineer</strong> roles —
@@ -62,21 +78,22 @@ short_bio: >-
 
 short_bio_zh: >-
   <p>
-    我是<a href="https://www.cqu.edu.cn/" target="_blank">重庆大学</a>软件工程专业博士研究生，
-    师从<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>。
-    主要研究方向为：<strong>高效多模态大模型推理</strong>（幻觉抑制、可靠性度量与保证、训练无关即插即用方法）、
-    <strong>长视频时序理解</strong>（视频时序定位与时刻检索），以及<strong>多模态 Agent</strong>
-    （agentic harness 设计、面向小时级视频理解的工具调用与多角色协同编排）。
+    我是<a href="https://www.cqu.edu.cn/" target="_blank">重庆大学</a>软件工程博士研究生，师从<a href="https://www.cse.cqu.edu.cn/info/2165/8486.htm" target="_blank">葛永新教授</a>。研究聚焦<strong>可靠 AI</strong>，涵盖多模态大模型高效推理、长视频时序理解与多模态 Agent。
   </p>
   <p>
-    已完成在<a href="https://www.a-star.edu.sg/" target="_blank">新加坡科技研究局（A*STAR）</a> CFAR Group
-    为期一年的国家公派联合培养，导师为
-    <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>，
-    研究内容为多模态大模型的高效推理及 Agentic 应用落地、端侧 MLLM 可靠性度量。
+    获国家留学基金委（CSC）资助，已完成在<a href="https://www.a-star.edu.sg/" target="_blank">新加坡科技研究局（A*STAR）</a>的 <strong>12 个月联合培养</strong>，导师为 <a href="https://joeyzhouty.github.io/" target="_blank">Prof. Joey Tianyi Zhou</a>，拓展国际研究视野。
   </p>
-  <p>
-    已发表 2 篇 CCF-A 类会议论文（ACM MM，一作）与 1 篇中科院一区期刊论文（IEEE TCSVT，一作）。
-  </p>
+  <ul class="pl-3 mb-3">
+    <li class="mb-2">
+      <strong>快速学习与技术跟进：</strong>围绕预训练模型的视频理解可靠性，研究从 I3D/C3D 拓展至 CLIP、MLLM、Agent 与 Agentic Harness，持续学习并实践前沿技术。
+    </li>
+    <li class="mb-2">
+      <strong>技术落地与系统设计：</strong>二次开发路面图像 AI 辅助标注与管理平台，自动化标注可用率达 <strong>95%</strong>；搭建面向 AIGC 视频检测的 Agentic Harness 数据合成系统，突破预设类型限制，生成 <strong>100+ 小时</strong>有效数据；实现“感知 → 分析 → 取证 → 决策”Agent 系统，支持小时级长视频的事件精准定位与证据追溯。
+    </li>
+    <li>
+      <strong>工程与科研结合：</strong>从项目难题中提炼科学问题，已发表 <strong>2 篇 CCF A 类会议论文、1 篇 JCR Q1 期刊论文</strong>（均为一作）及 1 篇中文核心期刊论文，另有 2 篇 CCF A 类会议论文在投；多次负责省市级及国家级项目申报书撰写，相关项目获批。
+    </li>
+  </ul>
   <div class="callout-hire-me">
     <i class="fas fa-paper-plane"></i>
     目前正在寻找<strong>算法/研究工程师方向的实习或全职</strong>机会，欢迎联系交流！
